@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Console Valorant Archive documents the history of EU Console Valorant ranked, including Radiant leaderboard races, player profiles, act results and records."
+    content="Console Valorant Archive documents the history of EU Console Valorant ranked, including Radiant leaderboard races, player careers, act results and records."
   >
 
   <link
@@ -38,7 +38,7 @@
       font-family: Arial, Helvetica, sans-serif;
       background: #0b0f14;
       color: #e8edf2;
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     a {
@@ -70,7 +70,6 @@
     .brand {
       font-size: 1.15rem;
       font-weight: 700;
-      letter-spacing: 0.3px;
     }
 
     .nav-links {
@@ -85,7 +84,7 @@
     }
 
     .hero {
-      padding: 90px 0 70px;
+      padding: 90px 0 75px;
       background:
         radial-gradient(circle at top right, rgba(255, 70, 85, 0.14), transparent 38%),
         #0b0f14;
@@ -101,20 +100,31 @@
     }
 
     h1 {
-      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
       line-height: 1.05;
       max-width: 900px;
       margin-bottom: 24px;
     }
 
-    .hero p {
-      max-width: 760px;
+    .hero-text {
+      max-width: 770px;
       color: #b9c3cd;
       font-size: 1.08rem;
     }
 
+    .coverage {
+      display: inline-block;
+      margin-top: 24px;
+      padding: 8px 13px;
+      border: 1px solid #34414e;
+      border-radius: 20px;
+      background: #121a23;
+      color: #cbd3db;
+      font-size: 0.9rem;
+    }
+
     .hero-actions {
-      margin-top: 32px;
+      margin-top: 30px;
       display: flex;
       flex-wrap: wrap;
       gap: 14px;
@@ -132,11 +142,16 @@
     .button.secondary {
       background: #18212b;
       border: 1px solid #2d3946;
-      color: #e8edf2;
     }
 
     section {
       padding: 70px 0;
+    }
+
+    .section-alt {
+      background: #101720;
+      border-top: 1px solid #222d38;
+      border-bottom: 1px solid #222d38;
     }
 
     .section-title {
@@ -146,7 +161,7 @@
 
     .section-intro {
       color: #aeb8c2;
-      max-width: 760px;
+      max-width: 800px;
       margin-bottom: 34px;
     }
 
@@ -173,51 +188,77 @@
       font-size: 0.95rem;
     }
 
-    .featured {
-      background: #101720;
-      border-top: 1px solid #202a35;
-      border-bottom: 1px solid #202a35;
-    }
-
-    .featured-box {
+    .leaders {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 36px;
-      align-items: center;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
     }
 
-    .featured h2 {
-      font-size: 2.3rem;
+    .leader-card {
+      background: #0b0f14;
+      border: 1px solid #2b3744;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .rank {
+      color: #ff5967;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      margin-bottom: 9px;
+    }
+
+    .leader-card h3 {
+      font-size: 1.7rem;
+      margin-bottom: 4px;
+    }
+
+    .nationality {
+      color: #8f9ba7;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+    }
+
+    .leader-card p {
+      color: #b6c0ca;
       margin-bottom: 16px;
     }
 
-    .featured p {
-      color: #b4bec8;
-      margin-bottom: 14px;
+    .profile-link {
+      color: #ff6672;
+      font-weight: 700;
     }
 
-    .stat-grid {
+    .career-list {
+      margin-top: 26px;
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 14px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
     }
 
-    .stat {
-      background: #0b0f14;
+    .career {
+      background: #111821;
       border: 1px solid #25303d;
       border-radius: 10px;
       padding: 20px;
     }
 
-    .stat strong {
-      display: block;
-      font-size: 1.7rem;
-      color: #ff5967;
+    .career h3 {
+      font-size: 1.05rem;
+      margin-bottom: 3px;
     }
 
-    .stat span {
-      color: #9faab5;
-      font-size: 0.9rem;
+    .career .country {
+      color: #8d99a5;
+      font-size: 0.84rem;
+      margin-bottom: 8px;
+    }
+
+    .career p {
+      color: #aeb8c2;
+      font-size: 0.92rem;
     }
 
     table {
@@ -238,7 +279,6 @@
 
     th {
       background: #161f29;
-      color: #ffffff;
     }
 
     td {
@@ -249,9 +289,9 @@
       border-bottom: none;
     }
 
-    .notice {
-      margin-top: 34px;
-      padding: 18px 20px;
+    .method {
+      margin-top: 30px;
+      padding: 20px;
       border-left: 4px solid #ff4655;
       background: #111821;
       color: #aeb8c2;
@@ -266,9 +306,9 @@
 
     @media (max-width: 800px) {
       .nav {
+        flex-direction: column;
         align-items: flex-start;
         padding: 18px 0;
-        flex-direction: column;
       }
 
       .nav-links {
@@ -277,12 +317,17 @@
       }
 
       .cards,
-      .featured-box {
+      .leaders,
+      .career-list {
         grid-template-columns: 1fr;
       }
 
       .hero {
         padding: 60px 0 50px;
+      }
+
+      table {
+        font-size: 0.88rem;
       }
     }
   </style>
@@ -306,8 +351,9 @@
 
       <nav class="nav-links">
         <a href="#history">History</a>
+        <a href="#leaders">All-Time Leaders</a>
         <a href="#players">Players</a>
-<a href="/players/lewitrotter/">LewiTrotter</a>
+        <a href="#records">Records</a>
         <a href="#about">About</a>
       </nav>
     </div>
@@ -321,16 +367,19 @@
 
         <h1>Console Valorant Archive</h1>
 
-        <p>
-          An independent archive documenting the history of EU Console
-          Valorant ranked, from the original console beta through the modern
-          Radiant leaderboard. Explore notable players, act-by-act leaderboard
-          races, #1 finishes and records from across the scene.
+        <p class="hero-text">
+          An independent archive documenting the history of EU Console Valorant
+          ranked, including the players, leaderboard races, #1 Radiant finishes
+          and records that shaped each era of the scene.
         </p>
+
+        <div class="coverage">
+          Archive coverage: Episode 9 Act 1 – V26 Act 4
+        </div>
 
         <div class="hero-actions">
           <a class="button" href="#history">Explore the history</a>
-<a class="button secondary" href="/players/lewitrotter/">LewiTrotter</a>
+          <a class="button secondary" href="#leaders">View all-time leaders</a>
         </div>
       </div>
     </section>
@@ -340,87 +389,158 @@
         <h2 class="section-title">Leaderboard History</h2>
 
         <p class="section-intro">
-          Console Valorant ranked launched during Episode 9 Act 1.
-          Since then, the EU leaderboard has featured repeated battles for
-          #1 Radiant across multiple eras of the game.
+          EU Console Valorant ranked began during Episode 9 Act 1.
+          The archive separates the leaderboard into historical eras while
+          documenting individual acts within each period.
         </p>
 
         <div class="cards">
+
           <div class="card">
-            <h3>Episode 9 Era</h3>
+            <h3>Console Beta & Episode 9 Era</h3>
             <p>
-              The beginning of EU Console Valorant ranked, including early
-              leaders such as Tokyo Jr, SSS, Evil, LewiTrotter, WukongVal,
-              RSC Vectflow and others.
+              The beginning of EU Console Valorant ranked, featuring players
+              such as French duo Tokyo Jr and SSS, English players LewiTrotter,
+              WukongVal and RSC Vectflow, Turkish player Evil, German player
+              RSC Eddn and other early Radiants.
             </p>
           </div>
 
           <div class="card">
             <h3>V25 Era</h3>
             <p>
-              A period featuring players including Camvlr, ZeldrissEU,
-              RSC Chad, SaGaR, 1Tap, CLT Enes, Weiyue and OMT Xyler.
+              An era featuring players including German player Camvlr,
+              French players ZeldrissEU and RSC Chad, Dutch player SaGaR,
+              French player 1Tap, Turkish player CLT Enes and others.
             </p>
           </div>
 
           <div class="card">
             <h3>V26 Era</h3>
             <p>
-              The modern era of the leaderboard, featuring Camvlr, Céto,
-              LewiTrotter, Kenzo, qFayZen, CLT Titan and other leading players.
+              The V26 acts documented in this archive feature players including
+              Camvlr, English player LewiTrotter, Turkish player Céto,
+              Spanish player Kenzo, French player qFayZen and German player
+              CLT Titan.
             </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <section class="featured" id="lewitrotter">
-      <div class="container featured-box">
+    <section class="section-alt" id="leaders">
+      <div class="container">
 
-        <div>
-          <div class="eyebrow">Featured Player</div>
+        <div class="eyebrow">Career Ranking</div>
+        <h2 class="section-title">All-Time Leaders</h2>
 
-          <h2>LewiTrotter</h2>
+        <p class="section-intro">
+          Player prominence is based on the results documented by the archive,
+          with particular weight given to act-ending #1 finishes, sustained
+          high leaderboard placements, periods of dominance and longevity.
+        </p>
 
-          <p>
-            LewiTrotter became one of the most prominent players in EU Console
-            Valorant ranked after rising rapidly to #1 Radiant during Episode 9
-            Act 2.
-          </p>
+        <div class="leaders">
 
-          <p>
-            He finished #1 in Episode 9 Act 2 and Episode 9 Act 3 before taking
-            a long break from Console Valorant. He later returned in V26 Act 3
-            and again finished #1.
-          </p>
+          <article class="leader-card">
+            <div class="rank">Archive Rank #1</div>
+            <h3>LewiTrotter</h3>
+            <div class="nationality">England</div>
 
-          <p>
-            During much of his early leaderboard success, LewiTrotter regularly
-            played alongside WukongVal, who was also one of the highest-ranked
-            players in the region.
-          </p>
+            <p>
+              Three documented act-ending #1 finishes: Episode 9 Act 2,
+              Episode 9 Act 3 and V26 Act 3. His first two #1 runs came in
+              consecutive acts before a long break from Console Valorant,
+              followed by another #1 finish after returning in V26 Act 3.
+            </p>
+
+            <a class="profile-link" href="/players/lewitrotter/">
+              View LewiTrotter profile →
+            </a>
+          </article>
+
+          <article class="leader-card">
+            <div class="rank">Archive Rank #2</div>
+            <h3>Camvlr</h3>
+            <div class="nationality">Germany</div>
+
+            <p>
+              Three official act-ending #1 finishes across V25 Act 3,
+              V25 Act 4 and V26 Act 1, alongside several other high
+              leaderboard placements across the V25 and V26 eras.
+            </p>
+
+            <span class="profile-link">
+              Player profile coming next
+            </span>
+          </article>
+
         </div>
 
-        <div class="stat-grid">
-          <div class="stat">
-            <strong>3</strong>
-            <span>Documented act-ending #1 finishes</span>
+        <div class="career-list">
+
+          <div class="career">
+            <h3>1Tap</h3>
+            <div class="country">France</div>
+            <p>
+              Act-ending #1 finishes in V25 Act 5 and V26 Act 2,
+              with another top-six finish in V26 Act 3.
+            </p>
           </div>
 
-          <div class="stat">
-            <strong>#1</strong>
-            <span>Episode 9 Act 2 finish</span>
+          <div class="career">
+            <h3>Céto</h3>
+            <div class="country">Turkey</div>
+            <p>
+              Progressed from #4 in V26 Act 2 to #2 in V26 Act 3
+              before finishing #1 in V26 Act 4.
+            </p>
           </div>
 
-          <div class="stat">
-            <strong>#1</strong>
-            <span>Episode 9 Act 3 finish</span>
+          <div class="career">
+            <h3>ZeldrissEU</h3>
+            <div class="country">France</div>
+            <p>
+              Finished #1 in V25 Act 1 and later finished #2 behind
+              Camvlr in V25 Act 4.
+            </p>
           </div>
 
-          <div class="stat">
-            <strong>#1</strong>
-            <span>V26 Act 3 finish</span>
+          <div class="career">
+            <h3>WukongVal</h3>
+            <div class="country">England</div>
+            <p>
+              One of the strongest early EU players, including a #2 finish
+              in Episode 9 Act 3 and repeated appearances around the top
+              of the leaderboard.
+            </p>
           </div>
+
+          <div class="career">
+            <h3>RSC Vectflow</h3>
+            <div class="country">England</div>
+            <p>
+              Reached #1 during the original beta period and later finished
+              #3 in Episode 9 Act 3 after a season-long fight near the top.
+            </p>
+          </div>
+
+          <div class="career">
+            <h3>RSC Eddn</h3>
+            <div class="country">Germany</div>
+            <p>
+              A long-running high leaderboard player who challenged for #1
+              across multiple eras and finished #3 in V25 Act 2.
+            </p>
+          </div>
+
+        </div>
+
+        <div class="method">
+          These rankings represent the archive's career assessment using
+          documented leaderboard results. A dedicated methodology page will
+          be added as the archive expands.
         </div>
 
       </div>
@@ -428,47 +548,53 @@
 
     <section id="players">
       <div class="container">
-        <h2 class="section-title">Notable EU Players</h2>
+
+        <h2 class="section-title">Player Archive</h2>
 
         <p class="section-intro">
-          The archive will contain individual profiles and leaderboard histories
-          for notable players across every era of Console Valorant EU.
+          Individual player profiles will document nationalities, leaderboard
+          finishes, notable ranked runs, teammates and act-by-act history.
+          More profiles will be added over time.
         </p>
 
         <div class="cards">
+
           <div class="card">
-            <h3>Camvlr</h3>
+            <h3>LewiTrotter — England</h3>
             <p>
-              A repeated #1 contender with several elite finishes across the
-              V25 and V26 eras.
+              Three documented act-ending #1 finishes across the Episode 9
+              and V26 eras.
             </p>
           </div>
 
           <div class="card">
-            <h3>WukongVal</h3>
+            <h3>Camvlr — Germany</h3>
             <p>
-              One of the strongest early EU Console players and a frequent
-              high-ranking duo partner of LewiTrotter.
+              Multiple #1 finishes and one of the longest sustained runs
+              near the top of the EU leaderboard.
             </p>
           </div>
 
           <div class="card">
-            <h3>Céto</h3>
+            <h3>More player profiles</h3>
             <p>
-              A leading V26-era player who progressed from top-four and
-              runner-up finishes to an act-ending #1.
+              Profiles for players throughout the beta, Episode 9, V25 and
+              V26 eras will be added as the archive develops.
             </p>
           </div>
+
         </div>
       </div>
     </section>
 
-    <section>
+    <section class="section-alt" id="records">
       <div class="container">
-        <h2 class="section-title">Selected #1 Finishes</h2>
+
+        <h2 class="section-title">Act-Ending #1 Finishes</h2>
 
         <p class="section-intro">
-          This archive will eventually include a complete act-by-act record.
+          The table below records the documented #1 finisher for each completed
+          full act covered by the archive.
         </p>
 
         <table>
@@ -476,72 +602,112 @@
             <tr>
               <th>Act</th>
               <th>Player</th>
-              <th>Result</th>
+              <th>Nationality</th>
             </tr>
           </thead>
 
           <tbody>
             <tr>
+              <td>Episode 9 Act 1</td>
+              <td>Evil</td>
+              <td>Turkey</td>
+            </tr>
+
+            <tr>
               <td>Episode 9 Act 2</td>
               <td>LewiTrotter</td>
-              <td>Finished #1</td>
+              <td>England</td>
             </tr>
 
             <tr>
               <td>Episode 9 Act 3</td>
               <td>LewiTrotter</td>
-              <td>Finished #1</td>
+              <td>England</td>
             </tr>
 
             <tr>
               <td>V25 Act 1</td>
               <td>ZeldrissEU</td>
-              <td>Finished #1</td>
+              <td>France</td>
             </tr>
 
             <tr>
               <td>V25 Act 2</td>
               <td>RSC Chad</td>
-              <td>Finished #1</td>
+              <td>France</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 3</td>
+              <td>Camvlr</td>
+              <td>Germany</td>
             </tr>
 
             <tr>
               <td>V25 Act 4</td>
               <td>Camvlr</td>
-              <td>Finished #1</td>
+              <td>Germany</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 5</td>
+              <td>1Tap</td>
+              <td>France</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 6</td>
+              <td>OMT Xyler</td>
+              <td>France</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 1</td>
+              <td>Camvlr</td>
+              <td>Germany</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 2</td>
+              <td>1Tap</td>
+              <td>France</td>
             </tr>
 
             <tr>
               <td>V26 Act 3</td>
               <td>LewiTrotter</td>
-              <td>Finished #1</td>
+              <td>England</td>
             </tr>
 
             <tr>
               <td>V26 Act 4</td>
               <td>Céto</td>
-              <td>Finished #1</td>
+              <td>Turkey</td>
             </tr>
           </tbody>
         </table>
+
       </div>
     </section>
 
     <section id="about">
       <div class="container">
+
         <h2 class="section-title">About the Archive</h2>
 
         <p class="section-intro">
           Console Valorant Archive is an independent community project created
           to preserve the history of ranked Console Valorant in Europe.
-          The site will be expanded with player profiles, complete leaderboard
-          timelines, records, screenshots and source links.
+          The archive aims to document leaderboard results and player careers
+          using historical leaderboard information, screenshots, statistics
+          and other source material where available.
         </p>
 
-        <div class="notice">
+        <div class="method">
           Console Valorant Archive is an independent website and is not
           affiliated with Riot Games or the players documented on this site.
         </div>
+
       </div>
     </section>
 
