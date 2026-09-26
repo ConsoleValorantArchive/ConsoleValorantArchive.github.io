@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>LewiTrotter | Console Valorant EU Radiant History</title>
+
+  <meta
+    name="description"
+    content="LewiTrotter is an English Console Valorant player known for multiple #1 Radiant finishes on the EU leaderboard. Explore his ranked history, results, duos and career timeline."
+  >
+
+  <link
+    rel="canonical"
+    href="https://consolevalorantarchive.github.io/players/lewitrotter/"
+  >
+
+  <meta property="og:title" content="LewiTrotter | Console Valorant Archive">
+  <meta
+    property="og:description"
+    content="The ranked history of English Console Valorant player LewiTrotter, including his #1 Radiant finishes and EU leaderboard career."
+  >
+  <meta
+    property="og:url"
+    content="https://consolevalorantarchive.github.io/players/lewitrotter/"
+  >
+  <meta property="og:type" content="article">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f14;
+      color: #e8edf2;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: #111821;
+      border-bottom: 1px solid #25303d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #c3ccd6;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      padding: 80px 0 65px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 70, 85, 0.15), transparent 38%),
+        #0b0f14;
+    }
+
+    .breadcrumb {
+      color: #8e9aa6;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+
+    .breadcrumb a {
+      color: #ff5967;
+    }
+
+    .eyebrow {
+      color: #ff4655;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      color: #bdc6cf;
+      font-size: 1.12rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .tag {
+      background: #151e28;
+      border: 1px solid #2b3744;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      color: #d2d8df;
+    }
+
+    .tag.highlight {
+      border-color: #ff4655;
+      color: #ff6672;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-border {
+      border-top: 1px solid #222d38;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: #bac4ce;
+      margin-bottom: 16px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 45px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      background: #111821;
+      border: 1px solid #283440;
+      border-radius: 10px;
+      padding: 21px;
+    }
+
+    .stat strong {
+      display: block;
+      color: #ff5967;
+      font-size: 1.7rem;
+      margin-bottom: 2px;
+    }
+
+    .stat span {
+      color: #9ca8b4;
+      font-size: 0.9rem;
+    }
+
+    .timeline {
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #ff4655;
+      padding: 0 0 36px 26px;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #ff4655;
+      position: absolute;
+      left: -8px;
+      top: 5px;
+    }
+
+    .timeline-label {
+      color: #ff6672;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .timeline-item p {
+      max-width: 850px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111821;
+      border: 1px solid #27333f;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 25px;
+    }
+
+    th,
+    td {
+      padding: 15px 16px;
+      text-align: left;
+      border-bottom: 1px solid #27333f;
+    }
+
+    th {
+      background: #17212b;
+      color: #ffffff;
+    }
+
+    td {
+      color: #c3ccd5;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .person-card {
+      background: #111821;
+      border: 1px solid #27333f;
+      border-radius: 10px;
+      padding: 23px;
+      margin-top: 20px;
+    }
+
+    .notice {
+      margin-top: 30px;
+      padding: 18px 20px;
+      background: #111821;
+      border-left: 4px solid #ff4655;
+      color: #aeb8c2;
+    }
+
+    footer {
+      border-top: 1px solid #25303d;
+      padding: 34px 0;
+      color: #8f9aa5;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0 45px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      table {
+        font-size: 0.88rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "LewiTrotter - Console Valorant EU Ranked History",
+    "description": "The ranked history of English Console Valorant player LewiTrotter.",
+    "mainEntityOfPage": "https://consolevalorantarchive.github.io/players/lewitrotter/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Console Valorant Archive"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">Console Valorant Archive</a>
+
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#history">History</a>
+        <a href="/#players">Players</a>
+        <a href="/#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="breadcrumb">
+          <a href="/">Home</a> / Players / LewiTrotter
+        </div>
+
+        <div class="eyebrow">Player Profile</div>
+
+        <h1>LewiTrotter</h1>
+
+        <p class="subtitle">
+          LewiTrotter is an English Console Valorant player known for reaching
+          and holding #1 Radiant on the EU console leaderboard across multiple
+          acts.
+        </p>
+
+        <div class="tags">
+          <span class="tag highlight">England</span>
+          <span class="tag">EU</span>
+          <span class="tag">Radiant</span>
+          <span class="tag">3 documented #1 act finishes</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container overview-grid">
+
+        <div>
+          <div class="eyebrow">Overview</div>
+          <h2>Console Valorant career</h2>
+
+          <p>
+            LewiTrotter first became one of the most prominent names on the
+            EU Console Valorant leaderboard during Episode 9 Act 2.
+            He rose rapidly through the leaderboard alongside fellow English
+            player WukongVal.
+          </p>
+
+          <p>
+            LewiTrotter took the #1 position during Episode 9 Act 2 and remained
+            there for the rest of the act. WukongVal spent most of the same act
+            in the #2 position before eventually finishing #3.
+          </p>
+
+          <p>
+            LewiTrotter again held #1 throughout Episode 9 Act 3, before both
+            players announced a break from Console Valorant.
+          </p>
+
+          <p>
+            After being absent from the top of the leaderboard for several acts,
+            LewiTrotter returned during V26 Act 3 and once again finished the
+            act at #1.
+          </p>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>England</strong>
+            <span>Nationality</span>
+          </div>
+
+          <div class="stat">
+            <strong>3</strong>
+            <span>Documented #1 act finishes</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>Episode 9 Act 2</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>Episode 9 Act 3</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>V26 Act 3</span>
+          </div>
+
+          <div class="stat">
+            <strong>EU</strong>
+            <span>Leaderboard region</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">Career Timeline</div>
+        <h2>Act-by-act history</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-label">Console Beta</div>
+            <h3>Early appearances with WukongVal</h3>
+
+            <p>
+              During the early Console Valorant beta period, LewiTrotter and
+              English player WukongVal were seen playing together before either
+              became the dominant leaderboard pair they would later become.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">Episode 9 Act 2</div>
+            <h3>Rapid rise to #1 Radiant</h3>
+
+            <p>
+              Episode 9 Act 2 initially featured French player RSC Edji at the
+              top of the early Radiant race, followed by French player RSC Ryuko,
+              Turkish player Evil and German player RSC Eddn.
+            </p>
+
+            <p>
+              LewiTrotter and WukongVal then climbed rapidly through the
+              leaderboard. LewiTrotter reached #1 while WukongVal reached #2.
+              LewiTrotter remained #1 for the rest of the act and finished
+              first overall.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">Episode 9 Act 3</div>
+            <h3>Second consecutive #1 finish</h3>
+
+            <p>
+              LewiTrotter was the first player to reach Radiant during
+              Episode 9 Act 3 and remained #1 throughout the act while
+              regularly duoing with WukongVal.
+            </p>
+
+            <p>
+              WukongVal held #2 for most of the act while English player
+              RSC Vectflow pushed closely behind him. LewiTrotter ultimately
+              finished #1, WukongVal #2 and RSC Vectflow #3.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">Break from Console Valorant</div>
+            <h3>LewiTrotter and WukongVal step away</h3>
+
+            <p>
+              At the end of Episode 9 Act 3, LewiTrotter and WukongVal
+              announced that they were taking a break from Console Valorant.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V26 Act 3</div>
+            <h3>Return to #1</h3>
+
+            <p>
+              French player Kais92 was the first player to reach Radiant during
+              V26 Act 3, with LewiTrotter following in second.
+            </p>
+
+            <p>
+              LewiTrotter initially moved between approximately #2 and #5 before
+              taking the #1 position after the opening days of the act.
+              He remained #1 for the remainder of the act and finished first.
+            </p>
+
+            <p>
+              Turkish player Céto finished #2, while French player SIR DIFF
+              made a late climb to finish #4.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V26 Act 4</div>
+            <h3>WukongVal returns</h3>
+
+            <p>
+              WukongVal returned to play alongside LewiTrotter during V26 Act 4.
+              Early in the act, LewiTrotter, WukongVal, French player qFayZen
+              and German player CLT Titan all spent time around the #1 position.
+            </p>
+
+            <p>
+              LewiTrotter and WukongVal eventually reached #1 and #2 and built
+              a lead during the opening part of the act before announcing
+              another break.
+            </p>
+
+            <p>
+              The later leaderboard race was led by Céto and German player
+              Camvlr, with Céto ultimately finishing the act at #1.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">Results</div>
+        <h2>Documented leaderboard results</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Act</th>
+              <th>Performance</th>
+              <th>Final result</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Episode 9 Act 2</td>
+              <td>Reached #1 and held it for the remainder of the act</td>
+              <td>#1</td>
+            </tr>
+
+            <tr>
+              <td>Episode 9 Act 3</td>
+              <td>First to Radiant and held #1 throughout the act</td>
+              <td>#1</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 3</td>
+              <td>Reached #1 early and held it for the remainder of the act</td>
+              <td>#1</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 4</td>
+              <td>Reached #1 before taking a break during the act</td>
+              <td>Did not finish #1</td>
+            </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">Notable Duo</div>
+        <h2>WukongVal</h2>
+
+        <div class="person-card">
+          <p>
+            WukongVal is an English Console Valorant player and one of
+            LewiTrotter's most notable ranked duo partners.
+          </p>
+
+          <p>
+            The pair played together during the early console era and became
+            especially prominent during Episode 9 Acts 2 and 3. In Episode 9
+            Act 3, LewiTrotter finished #1 and WukongVal finished #2.
+          </p>
+
+          <p>
+            WukongVal later returned during V26 Act 4, where the pair again
+            reached the top two positions during the opening part of the act.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">About this page</div>
+        <h2>Archive information</h2>
+
+        <p>
+          This page records LewiTrotter's known EU Console Valorant ranked
+          history. The archive will continue to be expanded with leaderboard
+          screenshots, Tracker information, clips and other source material
+          where available.
+        </p>
+
+        <div class="notice">
+          Console Valorant Archive is an independent community archive and is
+          not affiliated with Riot Games or LewiTrotter.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="/">← Console Valorant Archive</a>
+    </div>
+  </footer>
+
+</body>
+</html>
