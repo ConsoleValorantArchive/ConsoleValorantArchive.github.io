@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Console Valorant Archive | EU Radiant Leaderboard History</title>
+
+  <meta
+    name="description"
+    content="Console Valorant Archive documents the history of EU Console Valorant ranked, including Radiant leaderboard races, player profiles, act results and records."
+  >
+
+  <link
+    rel="canonical"
+    href="https://consolevalorantarchive.github.io/"
+  >
+
+  <meta property="og:title" content="Console Valorant Archive">
+  <meta
+    property="og:description"
+    content="An independent archive documenting EU Console Valorant Radiant leaderboard history, players, records and ranked races."
+  >
+  <meta
+    property="og:url"
+    content="https://consolevalorantarchive.github.io/"
+  >
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f14;
+      color: #e8edf2;
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: #111821;
+      border-bottom: 1px solid #25303d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #c3ccd6;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      padding: 90px 0 70px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 70, 85, 0.14), transparent 38%),
+        #0b0f14;
+    }
+
+    .eyebrow {
+      color: #ff4655;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(2.5rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      max-width: 900px;
+      margin-bottom: 24px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      color: #b9c3cd;
+      font-size: 1.08rem;
+    }
+
+    .hero-actions {
+      margin-top: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: #ff4655;
+      color: white;
+      font-weight: 700;
+    }
+
+    .button.secondary {
+      background: #18212b;
+      border: 1px solid #2d3946;
+      color: #e8edf2;
+    }
+
+    section {
+      padding: 70px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      color: #aeb8c2;
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: #111821;
+      border: 1px solid #25303d;
+      border-radius: 12px;
+      padding: 24px;
+    }
+
+    .card h3 {
+      margin-bottom: 8px;
+      font-size: 1.15rem;
+    }
+
+    .card p {
+      color: #aeb8c2;
+      font-size: 0.95rem;
+    }
+
+    .featured {
+      background: #101720;
+      border-top: 1px solid #202a35;
+      border-bottom: 1px solid #202a35;
+    }
+
+    .featured-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: center;
+    }
+
+    .featured h2 {
+      font-size: 2.3rem;
+      margin-bottom: 16px;
+    }
+
+    .featured p {
+      color: #b4bec8;
+      margin-bottom: 14px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      background: #0b0f14;
+      border: 1px solid #25303d;
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.7rem;
+      color: #ff5967;
+    }
+
+    .stat span {
+      color: #9faab5;
+      font-size: 0.9rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111821;
+      border: 1px solid #25303d;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    th,
+    td {
+      text-align: left;
+      padding: 15px 16px;
+      border-bottom: 1px solid #25303d;
+    }
+
+    th {
+      background: #161f29;
+      color: #ffffff;
+    }
+
+    td {
+      color: #c1c9d1;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .notice {
+      margin-top: 34px;
+      padding: 18px 20px;
+      border-left: 4px solid #ff4655;
+      background: #111821;
+      color: #aeb8c2;
+    }
+
+    footer {
+      border-top: 1px solid #25303d;
+      padding: 32px 0;
+      color: #8f9aa5;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        align-items: flex-start;
+        padding: 18px 0;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 18px;
+      }
+
+      .cards,
+      .featured-box {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 60px 0 50px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Console Valorant Archive",
+    "url": "https://consolevalorantarchive.github.io/",
+    "description": "An independent archive documenting EU Console Valorant Radiant leaderboard history, players, records and ranked races."
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">Console Valorant Archive</a>
+
+      <nav class="nav-links">
+        <a href="#history">History</a>
+        <a href="#players">Players</a>
+        <a href="#lewitrotter">LewiTrotter</a>
+        <a href="#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+        <div class="eyebrow">EU Console Valorant History</div>
+
+        <h1>Console Valorant Archive</h1>
+
+        <p>
+          An independent archive documenting the history of EU Console
+          Valorant ranked, from the original console beta through the modern
+          Radiant leaderboard. Explore notable players, act-by-act leaderboard
+          races, #1 finishes and records from across the scene.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button" href="#history">Explore the history</a>
+          <a class="button secondary" href="#lewitrotter">LewiTrotter</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="history">
+      <div class="container">
+        <h2 class="section-title">Leaderboard History</h2>
+
+        <p class="section-intro">
+          Console Valorant ranked launched during Episode 9 Act 1.
+          Since then, the EU leaderboard has featured repeated battles for
+          #1 Radiant across multiple eras of the game.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Episode 9 Era</h3>
+            <p>
+              The beginning of EU Console Valorant ranked, including early
+              leaders such as Tokyo Jr, SSS, Evil, LewiTrotter, WukongVal,
+              RSC Vectflow and others.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>V25 Era</h3>
+            <p>
+              A period featuring players including Camvlr, ZeldrissEU,
+              RSC Chad, SaGaR, 1Tap, CLT Enes, Weiyue and OMT Xyler.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>V26 Era</h3>
+            <p>
+              The modern era of the leaderboard, featuring Camvlr, Céto,
+              LewiTrotter, Kenzo, qFayZen, CLT Titan and other leading players.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured" id="lewitrotter">
+      <div class="container featured-box">
+
+        <div>
+          <div class="eyebrow">Featured Player</div>
+
+          <h2>LewiTrotter</h2>
+
+          <p>
+            LewiTrotter became one of the most prominent players in EU Console
+            Valorant ranked after rising rapidly to #1 Radiant during Episode 9
+            Act 2.
+          </p>
+
+          <p>
+            He finished #1 in Episode 9 Act 2 and Episode 9 Act 3 before taking
+            a long break from Console Valorant. He later returned in V26 Act 3
+            and again finished #1.
+          </p>
+
+          <p>
+            During much of his early leaderboard success, LewiTrotter regularly
+            played alongside WukongVal, who was also one of the highest-ranked
+            players in the region.
+          </p>
+        </div>
+
+        <div class="stat-grid">
+          <div class="stat">
+            <strong>3</strong>
+            <span>Documented act-ending #1 finishes</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>Episode 9 Act 2 finish</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>Episode 9 Act 3 finish</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>V26 Act 3 finish</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="players">
+      <div class="container">
+        <h2 class="section-title">Notable EU Players</h2>
+
+        <p class="section-intro">
+          The archive will contain individual profiles and leaderboard histories
+          for notable players across every era of Console Valorant EU.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Camvlr</h3>
+            <p>
+              A repeated #1 contender with several elite finishes across the
+              V25 and V26 eras.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>WukongVal</h3>
+            <p>
+              One of the strongest early EU Console players and a frequent
+              high-ranking duo partner of LewiTrotter.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Céto</h3>
+            <p>
+              A leading V26-era player who progressed from top-four and
+              runner-up finishes to an act-ending #1.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <h2 class="section-title">Selected #1 Finishes</h2>
+
+        <p class="section-intro">
+          This archive will eventually include a complete act-by-act record.
+        </p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Act</th>
+              <th>Player</th>
+              <th>Result</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Episode 9 Act 2</td>
+              <td>LewiTrotter</td>
+              <td>Finished #1</td>
+            </tr>
+
+            <tr>
+              <td>Episode 9 Act 3</td>
+              <td>LewiTrotter</td>
+              <td>Finished #1</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 1</td>
+              <td>ZeldrissEU</td>
+              <td>Finished #1</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 2</td>
+              <td>RSC Chad</td>
+              <td>Finished #1</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 4</td>
+              <td>Camvlr</td>
+              <td>Finished #1</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 3</td>
+              <td>LewiTrotter</td>
+              <td>Finished #1</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 4</td>
+              <td>Céto</td>
+              <td>Finished #1</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About the Archive</h2>
+
+        <p class="section-intro">
+          Console Valorant Archive is an independent community project created
+          to preserve the history of ranked Console Valorant in Europe.
+          The site will be expanded with player profiles, complete leaderboard
+          timelines, records, screenshots and source links.
+        </p>
+
+        <div class="notice">
+          Console Valorant Archive is an independent website and is not
+          affiliated with Riot Games or the players documented on this site.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      Console Valorant Archive
+    </div>
+  </footer>
+
+</body>
+</html>
