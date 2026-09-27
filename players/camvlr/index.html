@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Camvlr | Console Valorant EU Radiant History</title>
+
+  <meta
+    name="description"
+    content="Camvlr is a German Console Valorant player known for multiple #1 Radiant finishes and sustained success on the EU leaderboard. Explore his ranked history, results and career timeline."
+  >
+
+  <link
+    rel="canonical"
+    href="https://consolevalorantarchive.github.io/players/camvlr/"
+  >
+
+  <meta property="og:title" content="Camvlr | Console Valorant Archive">
+
+  <meta
+    property="og:description"
+    content="The ranked history of German Console Valorant player Camvlr, including multiple #1 Radiant finishes and sustained EU leaderboard success."
+  >
+
+  <meta
+    property="og:url"
+    content="https://consolevalorantarchive.github.io/players/camvlr/"
+  >
+
+  <meta property="og:type" content="article">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f14;
+      color: #e8edf2;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: #111821;
+      border-bottom: 1px solid #25303d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #c3ccd6;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      padding: 80px 0 65px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 70, 85, 0.15), transparent 38%),
+        #0b0f14;
+    }
+
+    .breadcrumb {
+      color: #8e9aa6;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+
+    .breadcrumb a {
+      color: #ff5967;
+    }
+
+    .eyebrow {
+      color: #ff4655;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      line-height: 1;
+      margin-bottom: 18px;
+    }
+
+    .subtitle {
+      max-width: 780px;
+      color: #bdc6cf;
+      font-size: 1.12rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 26px;
+    }
+
+    .tag {
+      background: #151e28;
+      border: 1px solid #2b3744;
+      padding: 7px 12px;
+      border-radius: 20px;
+      font-size: 0.88rem;
+      color: #d2d8df;
+    }
+
+    .tag.highlight {
+      border-color: #ff4655;
+      color: #ff6672;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-border {
+      border-top: 1px solid #222d38;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+    }
+
+    p {
+      color: #bac4ce;
+      margin-bottom: 16px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 45px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      background: #111821;
+      border: 1px solid #283440;
+      border-radius: 10px;
+      padding: 21px;
+    }
+
+    .stat strong {
+      display: block;
+      color: #ff5967;
+      font-size: 1.7rem;
+      margin-bottom: 2px;
+    }
+
+    .stat span {
+      color: #9ca8b4;
+      font-size: 0.9rem;
+    }
+
+    .timeline {
+      margin-top: 30px;
+    }
+
+    .timeline-item {
+      border-left: 3px solid #ff4655;
+      padding: 0 0 36px 26px;
+      position: relative;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: #ff4655;
+      position: absolute;
+      left: -8px;
+      top: 5px;
+    }
+
+    .timeline-label {
+      color: #ff6672;
+      font-size: 0.85rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.7px;
+    }
+
+    .timeline-item p {
+      max-width: 850px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #111821;
+      border: 1px solid #27333f;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 25px;
+    }
+
+    th,
+    td {
+      padding: 15px 16px;
+      text-align: left;
+      border-bottom: 1px solid #27333f;
+    }
+
+    th {
+      background: #17212b;
+      color: #ffffff;
+    }
+
+    td {
+      color: #c3ccd5;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    .person-card {
+      background: #111821;
+      border: 1px solid #27333f;
+      border-radius: 10px;
+      padding: 23px;
+      margin-top: 20px;
+    }
+
+    .notice {
+      margin-top: 30px;
+      padding: 18px 20px;
+      background: #111821;
+      border-left: 4px solid #ff4655;
+      color: #aeb8c2;
+    }
+
+    footer {
+      border-top: 1px solid #25303d;
+      padding: 34px 0;
+      color: #8f9aa5;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0 45px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      table {
+        font-size: 0.88rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Camvlr - Console Valorant EU Ranked History",
+    "description": "The ranked history of German Console Valorant player Camvlr.",
+    "mainEntityOfPage": "https://consolevalorantarchive.github.io/players/camvlr/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Console Valorant Archive"
+    }
+  }
+  </script>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">Console Valorant Archive</a>
+
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#history">History</a>
+        <a href="/#leaders">All-Time Leaders</a>
+        <a href="/#players">Players</a>
+        <a href="/#records">Records</a>
+        <a href="/#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="breadcrumb">
+          <a href="/">Home</a> / Players / Camvlr
+        </div>
+
+        <div class="eyebrow">Player Profile</div>
+
+        <h1>Camvlr</h1>
+
+        <p class="subtitle">
+          Camvlr is a German Console Valorant player known for multiple
+          act-ending #1 Radiant finishes and sustained success near the top
+          of the EU console leaderboard.
+        </p>
+
+        <div class="tags">
+          <span class="tag highlight">Germany</span>
+          <span class="tag">EU</span>
+          <span class="tag">Radiant</span>
+          <span class="tag">3 official #1 act finishes</span>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container overview-grid">
+
+        <div>
+          <div class="eyebrow">Overview</div>
+          <h2>Console Valorant career</h2>
+
+          <p>
+            Camvlr emerged as one of the leading players on the EU Console
+            Valorant leaderboard during the V25 era.
+          </p>
+
+          <p>
+            He finished #2 in V25 Act 1 before becoming a repeated #1 contender
+            across later acts. Camvlr officially finished #1 in V25 Act 3,
+            V25 Act 4 and V26 Act 1.
+          </p>
+
+          <p>
+            His leaderboard history also includes further high placements in
+            V26 Acts 2 and 4, giving him one of the most sustained elite ranked
+            careers documented by the archive.
+          </p>
+        </div>
+
+        <div class="stats">
+
+          <div class="stat">
+            <strong>Germany</strong>
+            <span>Nationality</span>
+          </div>
+
+          <div class="stat">
+            <strong>3</strong>
+            <span>Official #1 act finishes</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>V25 Act 3</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>V25 Act 4</span>
+          </div>
+
+          <div class="stat">
+            <strong>#1</strong>
+            <span>V26 Act 1</span>
+          </div>
+
+          <div class="stat">
+            <strong>EU</strong>
+            <span>Leaderboard region</span>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">Career Timeline</div>
+        <h2>Act-by-act history</h2>
+
+        <div class="timeline">
+
+          <div class="timeline-item">
+            <div class="timeline-label">V25 Act 1</div>
+            <h3>Breakthrough near the top</h3>
+
+            <p>
+              Camvlr was one of the major names competing around the top
+              positions during V25 Act 1.
+            </p>
+
+            <p>
+              French player ZeldrissEU ultimately finished #1, while Camvlr
+              comfortably finished the act at #2.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V25 Act 3</div>
+            <h3>First official #1 finish</h3>
+
+            <p>
+              Camvlr and Dutch player SaGaR were the two dominant players
+              during V25 Act 3, repeatedly moving between the #1 and #2
+              positions.
+            </p>
+
+            <p>
+              SaGaR was sitting at #1 on the final day before receiving a ban.
+              That ban was later confirmed to have been issued incorrectly,
+              but his leaderboard position was not restored.
+            </p>
+
+            <p>
+              Camvlr therefore recorded the official #1 finish for the act.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V25 Act 4</div>
+            <h3>Second consecutive official #1</h3>
+
+            <p>
+              Camvlr and French player ZeldrissEU were the two leading names
+              during V25 Act 4.
+            </p>
+
+            <p>
+              Camvlr ultimately finished #1, with ZeldrissEU finishing #2.
+              This gave Camvlr a second consecutive official act-ending #1.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V26 Act 1</div>
+            <h3>Third #1 finish</h3>
+
+            <p>
+              Camvlr and Turkish player CLT Enes fought for the #1 position
+              from early in V26 Act 1.
+            </p>
+
+            <p>
+              Toward the end of the act, Camvlr established a lead and held
+              the position through the finish.
+            </p>
+
+            <p>
+              Camvlr finished #1, French player Weiyue finished #2 and
+              CLT Enes finished #3.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V26 Act 2</div>
+            <h3>Early lead with Kenzo</h3>
+
+            <p>
+              Camvlr was one of the first players to reach Radiant during
+              V26 Act 2, with Spanish player Kenzo shortly behind him.
+            </p>
+
+            <p>
+              The pair occupied the #1 and #2 positions for much of the act,
+              before both were overtaken later in the leaderboard race.
+            </p>
+
+            <p>
+              Camvlr eventually finished #6, while Kenzo finished #3.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V26 Act 3</div>
+            <h3>Strong opening before dropping down the leaderboard</h3>
+
+            <p>
+              Camvlr remained around the top positions during the opening
+              two weeks of V26 Act 3.
+            </p>
+
+            <p>
+              He later dropped down the leaderboard and eventually finished
+              the act at #16.
+            </p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-label">V26 Act 4</div>
+            <h3>Late race with Céto</h3>
+
+            <p>
+              Later in V26 Act 4, Camvlr and Turkish player Céto climbed into
+              the leading positions after the opening leaderboard race.
+            </p>
+
+            <p>
+              Céto held #1 while Camvlr occupied #2 for much of the later
+              part of the act.
+            </p>
+
+            <p>
+              On the final day Camvlr dropped to #3, while Céto finished #1.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">Results</div>
+        <h2>Documented leaderboard results</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Act</th>
+              <th>Performance</th>
+              <th>Final result</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>V25 Act 1</td>
+              <td>Spent the act around the leading positions</td>
+              <td>#2</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 3</td>
+              <td>Fought SaGaR for #1 throughout the act</td>
+              <td>#1 official</td>
+            </tr>
+
+            <tr>
+              <td>V25 Act 4</td>
+              <td>Led the act alongside ZeldrissEU</td>
+              <td>#1</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 1</td>
+              <td>Fought CLT Enes for #1 before establishing a late lead</td>
+              <td>#1</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 2</td>
+              <td>Held a leading position for much of the act</td>
+              <td>#6</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 3</td>
+              <td>Top positions during the opening two weeks</td>
+              <td>#16</td>
+            </tr>
+
+            <tr>
+              <td>V26 Act 4</td>
+              <td>Spent much of the later act at #2</td>
+              <td>#3</td>
+            </tr>
+
+          </tbody>
+        </table>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">Notable Duo</div>
+        <h2>Kenzo</h2>
+
+        <div class="person-card">
+
+          <p>
+            Kenzo is a Spanish Console Valorant player and one of Camvlr's
+            notable ranked duo partners.
+          </p>
+
+          <p>
+            The pair were particularly prominent during V26 Act 2, when
+            Camvlr and Kenzo occupied the #1 and #2 positions for much of
+            the act before being overtaken later in the leaderboard race.
+          </p>
+
+          <p>
+            Kenzo also finished #7 in V26 Act 1 and #3 in V26 Act 2.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section-border">
+      <div class="container">
+
+        <div class="eyebrow">About this page</div>
+        <h2>Archive information</h2>
+
+        <p>
+          This page records Camvlr's documented EU Console Valorant ranked
+          history through V26 Act 4. The archive can be expanded with
+          leaderboard screenshots, statistics and other source material
+          where available.
+        </p>
+
+        <div class="notice">
+          Console Valorant Archive is an independent community archive and is
+          not affiliated with Riot Games or Camvlr.
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="/">← Console Valorant Archive</a>
+    </div>
+  </footer>
+
+</body>
+</html>
