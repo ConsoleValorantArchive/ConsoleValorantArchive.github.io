@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Players | Console Valorant EU Career Ranking</title>
+
+  <meta
+    name="description"
+    content="Browse the Console Valorant Archive player directory and all-time EU career ranking, including LewiTrotter, Camvlr, 1Tap, Céto, ZeldrissEU and other notable players."
+  >
+
+  <link
+    rel="canonical"
+    href="https://consolevalorantarchive.github.io/players/"
+  >
+
+  <meta property="og:title" content="Players | Console Valorant Archive">
+
+  <meta
+    property="og:description"
+    content="The Console Valorant Archive directory and career ranking of notable EU Console Valorant players."
+  >
+
+  <meta
+    property="og:url"
+    content="https://consolevalorantarchive.github.io/players/"
+  >
+
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f14;
+      color: #e8edf2;
+      line-height: 1.65;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: #111821;
+      border-bottom: 1px solid #25303d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #c3ccd6;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      padding: 80px 0 65px;
+      background:
+        radial-gradient(circle at top right, rgba(255, 70, 85, 0.14), transparent 38%),
+        #0b0f14;
+    }
+
+    .breadcrumb {
+      color: #8e9aa6;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+
+    .breadcrumb a {
+      color: #ff5967;
+    }
+
+    .eyebrow {
+      color: #ff4655;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      max-width: 790px;
+      color: #bdc6cf;
+      font-size: 1.08rem;
+    }
+
+    .coverage {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 8px 13px;
+      border: 1px solid #34414e;
+      border-radius: 20px;
+      background: #121a23;
+      color: #cbd3db;
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding: 65px 0;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+
+    .section-intro {
+      max-width: 850px;
+      color: #aeb8c2;
+      margin-bottom: 28px;
+    }
+
+    .method {
+      padding: 20px;
+      margin-bottom: 32px;
+      background: #111821;
+      border-left: 4px solid #ff4655;
+      color: #aeb8c2;
+    }
+
+    .ranking {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .player-row {
+      display: grid;
+      grid-template-columns: 70px 1.1fr 150px 2fr 150px;
+      gap: 18px;
+      align-items: center;
+      padding: 18px 20px;
+      background: #111821;
+      border: 1px solid #283440;
+      border-radius: 10px;
+    }
+
+    .player-row.top {
+      background: #121a23;
+      border-color: #3b4856;
+    }
+
+    .rank {
+      color: #ff5967;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .name {
+      font-weight: 700;
+      font-size: 1.08rem;
+    }
+
+    .country {
+      color: #9ba7b3;
+      font-size: 0.92rem;
+    }
+
+    .summary {
+      color: #b6c0ca;
+      font-size: 0.92rem;
+    }
+
+    .profile-link {
+      color: #ff6672;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .planned {
+      color: #75818d;
+      font-size: 0.86rem;
+      text-align: right;
+    }
+
+    .note {
+      margin-top: 30px;
+      color: #8f9ba7;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      border-top: 1px solid #25303d;
+      padding: 34px 0;
+      color: #8f9aa5;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 850px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+      }
+
+      .nav-links {
+        flex-wrap: wrap;
+      }
+
+      .player-row {
+        grid-template-columns: 52px 1fr;
+      }
+
+      .country,
+      .summary,
+      .profile-link,
+      .planned {
+        grid-column: 2;
+        text-align: left;
+      }
+
+      .hero {
+        padding: 55px 0 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">Console Valorant Archive</a>
+
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#history">History</a>
+        <a href="/#leaders">All-Time Leaders</a>
+        <a href="/players/">Players</a>
+        <a href="/#records">Records</a>
+        <a href="/#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="breadcrumb">
+          <a href="/">Home</a> / Players
+        </div>
+
+        <div class="eyebrow">Player Archive</div>
+
+        <h1>EU Console Valorant Players</h1>
+
+        <p>
+          A directory and career ranking of notable players documented by
+          Console Valorant Archive. Rankings are based on leaderboard results,
+          sustained high placements, periods of dominance and longevity.
+        </p>
+
+        <div class="coverage">
+          Archive coverage: Episode 9 Act 1 – V26 Act 4
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Career Ranking</div>
+        <h2 class="section-title">All-Time Player Ranking</h2>
+
+        <p class="section-intro">
+          This is an archive assessment rather than an official Riot Games
+          ranking. Act-ending #1 finishes receive the greatest weight, while
+          repeated top placements, longevity and sustained leaderboard
+          performance are also considered.
+        </p>
+
+        <div class="method">
+          Players with similar records may be separated by small margins.
+          The ranking can change when new acts are added to the archive or
+          additional historical information becomes available.
+        </div>
+
+        <div class="ranking">
+
+          <div class="player-row top">
+            <div class="rank">#1</div>
+            <div class="name">LewiTrotter</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Three documented act-ending #1 finishes, including consecutive
+              Episode 9 wins and another #1 after returning in V26 Act 3.
+            </div>
+            <a class="profile-link" href="/players/lewitrotter/">
+              View profile →
+            </a>
+          </div>
+
+          <div class="player-row top">
+            <div class="rank">#2</div>
+            <div class="name">Camvlr</div>
+            <div class="country">Germany</div>
+            <div class="summary">
+              Three official act-ending #1 finishes and sustained elite
+              placements across the V25 and V26 eras.
+            </div>
+            <a class="profile-link" href="/players/camvlr/">
+              View profile →
+            </a>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#3</div>
+            <div class="name">1Tap</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Act-ending #1 finishes in V25 Act 5 and V26 Act 2, followed
+              by another top-six finish in V26 Act 3.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#4</div>
+            <div class="name">Céto</div>
+            <div class="country">Turkey</div>
+            <div class="summary">
+              #4 in V26 Act 2, #2 in V26 Act 3 and #1 in V26 Act 4.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#5</div>
+            <div class="name">ZeldrissEU</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Finished #1 in V25 Act 1 and #2 in V25 Act 4.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#6</div>
+            <div class="name">WukongVal</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Elite early-era consistency, including a #2 finish in Episode 9
+              Act 3 and repeated appearances around the very top.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#7</div>
+            <div class="name">RSC Vectflow</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Reached #1 during beta and later finished #3 in Episode 9 Act 3.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#8</div>
+            <div class="name">RSC Eddn</div>
+            <div class="country">Germany</div>
+            <div class="summary">
+              Long-running elite player who challenged for #1 across multiple
+              periods and finished #3 in V25 Act 2.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#9</div>
+            <div class="name">RSC Chad</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Act-ending #1 in V25 Act 2 after previously reaching the top
+              positions during V25 Act 1.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#10</div>
+            <div class="name">SaGaR</div>
+            <div class="country">Netherlands</div>
+            <div class="summary">
+              Fought Camvlr for #1 throughout V25 Act 3 and held #1 on the
+              final day before a subsequently confirmed incorrect ban.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#11</div>
+            <div class="name">CLT Enes</div>
+            <div class="country">Turkey</div>
+            <div class="summary">
+              Sustained top-level presence across several acts, including
+              #2 in V25 Act 5 and #3 in V26 Act 1.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#12</div>
+            <div class="name">Weiyue</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Multi-act top-level presence, including #4 in V25 Act 6 and
+              #2 in V26 Act 1.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#13</div>
+            <div class="name">Evil</div>
+            <div class="country">Turkey</div>
+            <div class="summary">
+              First Radiant after the full-release reset and held #1 for the
+              remainder of Episode 9 Act 1.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#14</div>
+            <div class="name">RSC Ryuko</div>
+            <div class="country">France</div>
+            <div class="summary">
+              #2 in Episode 9 Act 2 with repeated top-level appearances across
+              later acts.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#15</div>
+            <div class="name">OMT Xyler</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Finished #1 in V25 Act 6 and later #5 in V26 Act 3.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#16</div>
+            <div class="name">CLT Titan</div>
+            <div class="country">Germany</div>
+            <div class="summary">
+              Repeated high placements across several acts and spent time
+              at #1 during V26 Act 4.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#17</div>
+            <div class="name">OMT Naksio</div>
+            <div class="country">France</div>
+            <div class="summary">
+              #3 in V25 Act 5 and #5 in V26 Act 2.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#18</div>
+            <div class="name">Kenzo</div>
+            <div class="country">Spain</div>
+            <div class="summary">
+              #7 in V26 Act 1 and #3 in V26 Act 2 after spending much of the
+              latter act around the leading positions.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#19</div>
+            <div class="name">qFayZen</div>
+            <div class="country">France</div>
+            <div class="summary">
+              #6 in V26 Act 1 and first player to reach #1 during V26 Act 4.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#20</div>
+            <div class="name">RSC Edji</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Early-beta Radiant, first Radiant of Episode 9 Act 2 and #5
+              at the end of that act.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#21</div>
+            <div class="name">SIR DIFF</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Repeated top-level appearances and a #4 finish in V26 Act 3.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#22</div>
+            <div class="name">Piiksouu</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Second player to Radiant in Episode 9 Act 3 and remained a
+              notable high-ranked player in later acts.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#23</div>
+            <div class="name">Tokyo Jr</div>
+            <div class="country">France</div>
+            <div class="summary">
+              One of the first two Console Valorant EU Radiants and the
+              original early #1 during the beta.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#24</div>
+            <div class="name">RSC Demon2</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Spent much of Episode 9 Act 3 around #3 before finishing #4.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#25</div>
+            <div class="name">gMr9</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Appeared around the top positions during V25 Acts 1 and 4.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#26</div>
+            <div class="name">Scofing</div>
+            <div class="country">Spain</div>
+            <div class="summary">
+              Spent V26 Act 1 around the top positions and finished #5.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#27</div>
+            <div class="name">SSS</div>
+            <div class="country">France</div>
+            <div class="summary">
+              One of the first two players to reach Radiant during the
+              Console Valorant beta.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#28</div>
+            <div class="name">Conflict</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Beta-era player who gradually improved and has remained around
+              the upper leaderboard positions from V25 onward.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#29</div>
+            <div class="name">Kais92</div>
+            <div class="country">France</div>
+            <div class="summary">
+              First player to reach Radiant during V26 Act 3.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#30</div>
+            <div class="name">Dezcow</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Top-50-level presence from late Episode 9 through much of V25.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#31</div>
+            <div class="name">Wxkzy</div>
+            <div class="country">France</div>
+            <div class="summary">
+              Notable top-position player during V25 Act 1.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#32</div>
+            <div class="name">Swizzy</div>
+            <div class="country">Germany</div>
+            <div class="summary">
+              Notable top-position player during V25 Act 1.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#33</div>
+            <div class="name">Kdot</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Emerged around the top 50 in late V25 and early V26.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#34</div>
+            <div class="name">Prosper</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Emerged around the top 100 near the end of V25 before becoming
+              a recurring top-50-level player in V26.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#35</div>
+            <div class="name">Kyubi</div>
+            <div class="country">Austria</div>
+            <div class="summary">
+              Became a recurring top-100-level player from mid-to-late V25
+              through mid V26.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#36</div>
+            <div class="name">Khamzat</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Reached the upper leaderboard during early-to-mid V25 after
+              beginning in Episode 9.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#37</div>
+            <div class="name">CLT Tryard</div>
+            <div class="country">Portugal</div>
+            <div class="summary">
+              Documented as one of the notable top-10 names during V25 Act 2.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#38</div>
+            <div class="name">EF Schweetz</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Reached the upper leaderboard during the beta era and was part
+              of the early EF group.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#39</div>
+            <div class="name">Misery</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Early-beta Radiant who remained part of the high-level EU scene.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#40</div>
+            <div class="name">qGh4st</div>
+            <div class="country">England</div>
+            <div class="summary">
+              Emerged around the top 100 during early-to-mid V26.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#41</div>
+            <div class="name">EF BallisticBongo56</div>
+            <div class="country">England</div>
+            <div class="summary">
+              One of the early Radiant players during the original console beta.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#42</div>
+            <div class="name">EF NitroZz</div>
+            <div class="country">England</div>
+            <div class="summary">
+              One of the early Radiant players during the original console beta.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#43</div>
+            <div class="name">EF EzPz</div>
+            <div class="country">England</div>
+            <div class="summary">
+              One of the early Radiant players during the original console beta.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+          <div class="player-row">
+            <div class="rank">#44</div>
+            <div class="name">EF Zami</div>
+            <div class="country">England</div>
+            <div class="summary">
+              One of the early Radiant players during the original console beta.
+            </div>
+            <div class="planned">Profile planned</div>
+          </div>
+
+        </div>
+
+        <p class="note">
+          Player profiles will be added progressively. A player's absence of a
+          live profile does not affect their position in the ranking.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      Console Valorant Archive
+    </div>
+  </footer>
+
+</body>
+</html>
