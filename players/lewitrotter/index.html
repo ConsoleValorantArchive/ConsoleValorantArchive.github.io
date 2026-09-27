@@ -3,7 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"
+>
   <title>LewiTrotter | Console Valorant EU Radiant History</title>
 
   <meta
@@ -280,7 +283,9 @@
 }
 
 .social-link {
-  display: inline-block;
+  display: inline-flex;
+align-items: center;
+gap: 8px;
   padding: 10px 16px;
   border-radius: 8px;
   background: #151e28;
@@ -288,7 +293,9 @@
   color: #e8edf2;
   font-weight: 700;
 }
-
+.social-link i {
+  font-size: 1.1rem;
+}
 .social-link:hover {
   border-color: #ff4655;
   color: #ff6672;
@@ -674,7 +681,8 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Twitch
+        <i class="fa-brands fa-twitch" aria-hidden="true"></i>
+<span>Twitch</span>
       </a>
 
       <a
@@ -683,7 +691,8 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        YouTube
+        <i class="fa-brands fa-youtube" aria-hidden="true"></i>
+<span>YouTube</span>
       </a>
 
       <a
@@ -692,7 +701,8 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        TikTok
+        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+<span>TikTok</span>
       </a>
     </div>
 
