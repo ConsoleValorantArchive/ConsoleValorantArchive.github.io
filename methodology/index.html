@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Methodology & Sources | Console Valorant Archive</title>
+
+  <meta
+    name="description"
+    content="How Console Valorant Archive documents EU ranked history, defines official #1 finishes, assesses player careers, handles sources and records uncertainty."
+  >
+
+  <link
+    rel="canonical"
+    href="https://consolevalorantarchive.github.io/methodology/"
+  >
+
+  <meta
+    property="og:title"
+    content="Methodology & Sources | Console Valorant Archive"
+  >
+
+  <meta
+    property="og:description"
+    content="The methodology used by Console Valorant Archive for EU player rankings, leaderboard history, sources and historical claims."
+  >
+
+  <meta
+    property="og:url"
+    content="https://consolevalorantarchive.github.io/methodology/"
+  >
+
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f14;
+      color: #e8edf2;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1000px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: #111821;
+      border-bottom: 1px solid #25303d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 22px;
+      font-size: 0.95rem;
+      color: #c3ccd6;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      padding: 80px 0 65px;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(255, 70, 85, 0.14),
+          transparent 38%
+        ),
+        #0b0f14;
+    }
+
+    .breadcrumb {
+      color: #8e9aa6;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+
+    .breadcrumb a {
+      color: #ff5967;
+    }
+
+    .eyebrow {
+      color: #ff4655;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(2.7rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      color: #bdc6cf;
+      max-width: 800px;
+      font-size: 1.08rem;
+    }
+
+    .coverage {
+      display: inline-block;
+      margin-top: 22px;
+      padding: 8px 13px;
+      border: 1px solid #34414e;
+      border-radius: 20px;
+      background: #121a23;
+      color: #cbd3db;
+      font-size: 0.9rem;
+    }
+
+    section {
+      padding: 62px 0;
+      border-top: 1px solid #222d38;
+    }
+
+    section:first-of-type {
+      border-top: none;
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #bac4ce;
+      margin-bottom: 16px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 28px;
+    }
+
+    .card {
+      background: #111821;
+      border: 1px solid #283440;
+      border-radius: 10px;
+      padding: 22px;
+    }
+
+    .card p {
+      margin-bottom: 0;
+      font-size: 0.95rem;
+    }
+
+    .definition {
+      background: #111821;
+      border-left: 4px solid #ff4655;
+      padding: 20px;
+      margin: 24px 0;
+    }
+
+    .definition strong {
+      color: #ffffff;
+    }
+
+    ol,
+    ul {
+      color: #bac4ce;
+      padding-left: 24px;
+      margin: 14px 0 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+    .weight-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 26px;
+    }
+
+    .weight {
+      background: #111821;
+      border: 1px solid #283440;
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+
+    .weight strong {
+      color: #ff6672;
+    }
+
+    .small {
+      font-size: 0.9rem;
+      color: #919da9;
+    }
+
+    footer {
+      border-top: 1px solid #25303d;
+      padding: 34px 0;
+      color: #8f9aa5;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 800px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0 45px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+
+      <a class="brand" href="/">
+        Console Valorant Archive
+      </a>
+
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#history">History</a>
+        <a href="/#leaders">All-Time Leaders</a>
+        <a href="/players/">Players</a>
+        <a href="/#records">Records</a>
+        <a href="/methodology/">Methodology</a>
+        <a href="/#about">About</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="breadcrumb">
+          <a href="/">Home</a> / Methodology
+        </div>
+
+        <div class="eyebrow">
+          Archive Standards
+        </div>
+
+        <h1>Methodology & Sources</h1>
+
+        <p>
+          This page explains how Console Valorant Archive records EU
+          leaderboard history, distinguishes official results from other
+          leaderboard achievements, assesses player careers and handles
+          historical information.
+        </p>
+
+        <div class="coverage">
+          Archive coverage: Episode 9 Act 1 – V26 Act 4
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Purpose</div>
+        <h2>What the archive is documenting</h2>
+
+        <p>
+          Console Valorant Archive is an independent historical record of the
+          EU Console Valorant ranked scene. Its focus is primarily on Radiant
+          leaderboard performance, notable leaderboard races, player careers
+          and act-ending results.
+        </p>
+
+        <p>
+          The archive is not an official Riot Games ranking and is not
+          affiliated with Riot Games or the players documented on the site.
+        </p>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Definitions</div>
+        <h2>Official and unofficial #1 results</h2>
+
+        <div class="definition">
+          <strong>Official act-ending #1:</strong>
+          the player recorded by the archive as finishing an act in the
+          #1 position on the relevant EU Console Valorant leaderboard.
+        </div>
+
+        <div class="definition">
+          <strong>#1 peak:</strong>
+          a player reaching the #1 position during an act without necessarily
+          holding that position when the act ended.
+        </div>
+
+        <div class="definition">
+          <strong>Unofficial #1 peak:</strong>
+          a #1 achievement that is relevant to a player's ranked history but
+          is not counted by the archive as an additional official act-ending
+          #1 finish. This can include #1 peaks on alternate accounts.
+        </div>
+
+        <p>
+          These distinctions are used so that a temporary #1 peak is not
+          presented as equivalent to an act-ending #1 finish.
+        </p>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Player Ranking</div>
+        <h2>How the all-time ranking is assessed</h2>
+
+        <p>
+          The Top 50 player ranking is an archive assessment rather than an
+          official competitive ranking. No single statistic determines every
+          position.
+        </p>
+
+        <div class="weight-list">
+
+          <div class="weight">
+            <strong>1. Act-ending #1 finishes</strong>
+            <p>
+              These receive the greatest weight because they represent the
+              strongest completed leaderboard result.
+            </p>
+          </div>
+
+          <div class="weight">
+            <strong>2. Sustained top leaderboard performance</strong>
+            <p>
+              Long periods spent near the highest positions are valued more
+              heavily than isolated short-term peaks.
+            </p>
+          </div>
+
+          <div class="weight">
+            <strong>3. Periods of dominance</strong>
+            <p>
+              Acts in which a player held a clear lead or remained difficult
+              to challenge can strengthen their career assessment.
+            </p>
+          </div>
+
+          <div class="weight">
+            <strong>4. Longevity</strong>
+            <p>
+              Players who remain competitive across several acts or eras
+              receive credit for sustained success.
+            </p>
+          </div>
+
+          <div class="weight">
+            <strong>5. Other high finishes and #1 peaks</strong>
+            <p>
+              Runner-up finishes, repeated top placements and non-act-ending
+              #1 peaks can help separate players with otherwise similar
+              records.
+            </p>
+          </div>
+
+        </div>
+
+        <p class="small">
+          Players with closely matched records may be separated by relatively
+          small margins. Rankings can change when new acts or additional
+          historical information are added.
+        </p>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Historical Evidence</div>
+        <h2>Sources used by the archive</h2>
+
+        <p>
+          Historical Console Valorant leaderboard information is not always
+          preserved in one permanent source. The archive can therefore use
+          multiple types of evidence depending on what survives from a
+          particular period.
+        </p>
+
+        <div class="cards">
+
+          <div class="card">
+            <h3>Leaderboard records</h3>
+            <p>
+              Final standings, leaderboard snapshots and documented positions
+              are preferred when available.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Tracker statistics</h3>
+            <p>
+              Publicly available player and act statistics may be used as
+              supporting evidence for ranked performance.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Screenshots and recordings</h3>
+            <p>
+              Historical screenshots, streams, clips and videos can help
+              establish leaderboard positions or notable ranked events.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Public player material</h3>
+            <p>
+              Public posts, streams and other player-controlled accounts can
+              be used when they provide useful historical evidence.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Uncertainty</div>
+        <h2>Incomplete or disputed information</h2>
+
+        <p>
+          Not every historical leaderboard position can always be verified to
+          the same standard. When evidence is incomplete, the archive aims to
+          avoid presenting uncertain details as more precise than the available
+          information supports.
+        </p>
+
+        <p>
+          Descriptions such as “around the top positions”, “top 50” or
+          “top 100” may therefore be used when an exact historical placement
+          is not available or is not important to the point being documented.
+        </p>
+
+        <p>
+          Unusual circumstances affecting a leaderboard result may also be
+          explained on the relevant player or act page rather than silently
+          removing that context.
+        </p>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+
+        <div class="eyebrow">Corrections</div>
+        <h2>Updating the archive</h2>
+
+        <p>
+          The archive is intended to remain editable as additional historical
+          information becomes available. Player descriptions, rankings,
+          nationalities, leaderboard results and other details can be corrected
+          or expanded when better evidence is found.
+        </p>
+
+        <p>
+          The coverage range displayed on the site identifies the latest act
+          currently included in the archive rather than implying that the
+          website is permanently up to date.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      Console Valorant Archive
+    </div>
+  </footer>
+
+</body>
+</html>
