@@ -1,0 +1,2060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Controversies | Console Valorant Archive</title>
+
+  <meta
+    name="description"
+    content="An evidence-led archive of notable controversies and allegations surrounding players in the EU Console Valorant community."
+  >
+
+  <link
+    rel="canonical"
+    href="https://consolevalorantarchive.github.io/controversies/"
+  >
+
+  <meta property="og:title" content="Controversies | Console Valorant Archive">
+  <meta
+    property="og:description"
+    content="Evidence, allegations, disputes and outcomes from the EU Console Valorant scene."
+  >
+  <meta
+    property="og:url"
+    content="https://consolevalorantarchive.github.io/controversies/"
+  >
+  <meta property="og:type" content="website">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0b0f14;
+      color: #e8edf2;
+      line-height: 1.72;
+    }
+
+    body.modal-open {
+      overflow: hidden;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(1050px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      background: #111821;
+      border-bottom: 1px solid #25303d;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 68px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 0.93rem;
+      color: #c3ccd6;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .hero {
+      padding: 80px 0 70px;
+      background:
+        radial-gradient(
+          circle at top right,
+          rgba(255, 70, 85, 0.16),
+          transparent 40%
+        ),
+        #0b0f14;
+    }
+
+    .breadcrumb {
+      color: #8e9aa6;
+      font-size: 0.9rem;
+      margin-bottom: 30px;
+    }
+
+    .breadcrumb a {
+      color: #ff5967;
+    }
+
+    .eyebrow {
+      color: #ff4655;
+      font-size: 0.84rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.7px;
+      margin-bottom: 12px;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 5.2rem);
+      line-height: 1.05;
+      margin-bottom: 22px;
+    }
+
+    .hero-text {
+      max-width: 850px;
+      color: #bdc6cf;
+      font-size: 1.08rem;
+    }
+
+    .archive-note {
+      margin-top: 28px;
+      background: #111821;
+      border-left: 4px solid #ff4655;
+      padding: 20px;
+      color: #b7c1cb;
+      max-width: 900px;
+    }
+
+    .contents {
+      padding: 38px 0;
+      border-top: 1px solid #222d38;
+      border-bottom: 1px solid #222d38;
+      background: #0e141c;
+    }
+
+    .contents-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .contents-links a {
+      background: #151e28;
+      border: 1px solid #2b3744;
+      border-radius: 20px;
+      padding: 7px 13px;
+      color: #cbd3db;
+      font-size: 0.9rem;
+    }
+
+    .contents-links a:hover {
+      border-color: #ff4655;
+      color: #ff6672;
+    }
+
+    .player-section {
+      padding: 68px 0;
+      border-bottom: 1px solid #222d38;
+      scroll-margin-top: 85px;
+    }
+
+    .player-section:nth-of-type(even) {
+      background: #0e141c;
+    }
+
+    .player-title {
+      font-size: 2.45rem;
+      margin-bottom: 30px;
+    }
+
+    .controversy {
+      background: #111821;
+      border: 1px solid #27333f;
+      border-radius: 12px;
+      padding: 26px;
+      margin-bottom: 22px;
+    }
+
+    .controversy h3 {
+      font-size: 1.35rem;
+      margin-bottom: 10px;
+    }
+
+    .assessment {
+      display: inline-block;
+      margin-bottom: 18px;
+      border-radius: 20px;
+      padding: 6px 11px;
+      background: #17212b;
+      border: 1px solid #33404d;
+      color: #ff7782;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    p {
+      color: #bac4ce;
+      margin-bottom: 16px;
+    }
+
+    ul {
+      color: #bac4ce;
+      padding-left: 24px;
+      margin: 12px 0 18px;
+    }
+
+    li {
+      margin-bottom: 7px;
+    }
+
+    blockquote {
+      margin: 18px 0;
+      padding: 14px 18px;
+      border-left: 3px solid #ff4655;
+      background: #0d131a;
+      color: #d4dae0;
+    }
+
+    .sources {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 18px;
+    }
+
+    .source-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid #354250;
+      background: #18212b;
+      color: #d4dbe2;
+      border-radius: 16px;
+      padding: 5px 10px;
+      font-size: 0.82rem;
+      cursor: pointer;
+      transition: 0.15s ease;
+    }
+
+    .source-chip:hover {
+      border-color: #ff4655;
+      color: #ff7782;
+    }
+
+    .external-chip::after {
+      content: " ↗";
+      opacity: 0.7;
+    }
+
+    .page-note {
+      padding: 55px 0;
+    }
+
+    .page-note-box {
+      background: #111821;
+      border-left: 4px solid #ff4655;
+      padding: 22px;
+      color: #aeb8c2;
+    }
+
+    footer {
+      border-top: 1px solid #25303d;
+      padding: 34px 0;
+      color: #8f9aa5;
+      font-size: 0.9rem;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      background: rgba(0, 0, 0, 0.88);
+      padding: 30px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal.open {
+      display: flex;
+    }
+
+    .modal-inner {
+      position: relative;
+      width: min(1200px, 96vw);
+      max-height: 94vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .modal-image {
+      max-width: 100%;
+      max-height: 84vh;
+      object-fit: contain;
+      border-radius: 8px;
+      box-shadow: 0 10px 50px rgba(0, 0, 0, 0.55);
+    }
+
+    .modal-caption {
+      color: #d4dae0;
+      margin-top: 12px;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: -16px;
+      right: -8px;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      border: 1px solid #53606d;
+      background: #111821;
+      color: white;
+      cursor: pointer;
+      font-size: 1.35rem;
+      z-index: 2;
+    }
+
+    .modal-close:hover {
+      border-color: #ff4655;
+      color: #ff6672;
+    }
+
+    @media (max-width: 850px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 18px 0;
+      }
+
+      .hero {
+        padding: 55px 0 50px;
+      }
+
+      .player-title {
+        font-size: 2rem;
+      }
+
+      .controversy {
+        padding: 20px;
+      }
+
+      .modal {
+        padding: 12px;
+      }
+
+      .modal-close {
+        right: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container nav">
+      <a class="brand" href="/">Console Valorant Archive</a>
+
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/#history">History</a>
+        <a href="/#leaders">All-Time Leaders</a>
+        <a href="/players/">Players</a>
+        <a href="/#records">Records</a>
+        <a href="/methodology/">Methodology</a>
+        <a href="/controversies/">Controversies</a>
+        <a href="/#about">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero">
+      <div class="container">
+
+        <div class="breadcrumb">
+          <a href="/">Home</a> / Controversies
+        </div>
+
+        <div class="eyebrow">Evidence & Community Discussion</div>
+
+        <h1>Controversies</h1>
+
+        <p class="hero-text">
+          This page documents notable controversies and allegations that have
+          circulated within the EU Console Valorant community. Inclusion on
+          this page does not mean that an allegation is considered true.
+        </p>
+
+        <div class="archive-note">
+          The archive looks at the available evidence for each allegation and
+          attempts to determine whether that evidence supports it, contradicts
+          it, or leaves the issue unresolved. Public Tracker records,
+          leaderboard results and publicly accessible social-media material
+          are generally treated as stronger evidence than anonymous claims.
+          Discord screenshots can still be relevant, but are treated more
+          cautiously because screenshots can potentially be edited and
+          accounts can potentially be impersonated.
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contents">
+      <div class="container">
+        <div class="eyebrow">On this page</div>
+
+        <div class="contents-links">
+          <a href="#lewitrotter">LewiTrotter</a>
+          <a href="#camvlr">Camvlr</a>
+          <a href="#1tap">1Tap</a>
+          <a href="#ceto">Céto</a>
+          <a href="#vectflow">RSC Vectflow</a>
+          <a href="#eddn">RSC Eddn</a>
+          <a href="#chad">RSC Chad</a>
+          <a href="#evil">Evil</a>
+          <a href="#xyler">OMT Xyler</a>
+          <a href="#sagar">SaGaR</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="player-section" id="lewitrotter">
+      <div class="container">
+
+        <div class="eyebrow">England</div>
+        <h2 class="player-title">LewiTrotter</h2>
+
+        <article class="controversy">
+          <h3>Five-stack allegations</h3>
+
+          <div class="assessment">
+            Assessment: Evidence does not support the allegation for his three
+            official act-ending #1 finishes.
+          </div>
+
+          <p>
+            One of the more common allegations surrounding LewiTrotter is that
+            he reached or maintained #1 by five-stacking with lower-ranked
+            players in order to receive easier matchmaking.
+          </p>
+
+          <p>
+            Much of this allegation appears to originate from Reddit posts
+            containing screenshots that supposedly show LewiTrotter playing in
+            low-ranked five-stacks.
+          </p>
+
+          <p>
+            The problem is that the screenshots do not reliably establish that
+            the player shown is actually LewiTrotter. In some examples, Riot
+            IDs are obscured entirely. In another widely circulated example,
+            the alleged LewiTrotter account uses the tag
+            <strong>#TTV 1</strong>, which does not match LewiTrotter's known
+            Riot ID.
+          </p>
+
+          <p>
+            Those screenshots therefore cannot reasonably be treated as proof
+            that LewiTrotter was the player shown.
+          </p>
+
+          <p>
+            There is also stronger evidence available from Tracker.gg. The
+            most recent time that LewiTrotter officially finished #1, his queue
+            statistics showed:
+          </p>
+
+          <ul>
+            <li>67 solo games</li>
+            <li>38 duo games</li>
+            <li>0 trio games</li>
+            <li>0 five-stack games</li>
+          </ul>
+
+          <p>
+            This directly contradicts the idea that LewiTrotter uses low-ranked
+            five-stacking.
+          </p>
+
+          <p>
+            Five-stack boosting is a genuine subject of controversy within
+            Valorant, which may partly explain why dominant players are
+            sometimes assumed to be using it. However, the evidence available
+            for LewiTrotter does not support that explanation for his official
+            #1 finishes.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://www.tiktok.com/@lewitrotter/photo/7654988357600021782"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Queue / Tracker evidence
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Cheating and Titan allegations</h3>
+
+          <div class="assessment">
+            Assessment: No convincing evidence has been found that LewiTrotter
+            cheated during his #1 runs.
+          </div>
+
+          <p>
+            Another allegation is that LewiTrotter used external hardware or
+            Titan-based cheats to dominate the EU Console leaderboard.
+          </p>
+
+          <p>
+            There are several problems with this claim.
+          </p>
+
+          <p>
+            Firstly, LewiTrotter had already established himself as one of the
+            dominant ranked players in the region during 2024, before
+            Titan-based aimbot became part of the community allegations
+            described here.
+          </p>
+
+          <p>
+            Secondly, claims that LewiTrotter was banned are not supported by
+            the historical leaderboard records supplied to the archive. His
+            accounts remain listed at #1 for all three acts in which he
+            officially finished first:
+          </p>
+
+          <ul>
+            <li>Episode 9 Act 2</li>
+            <li>Episode 9 Act 3</li>
+            <li>V26 Act 3</li>
+          </ul>
+
+          <p>
+            The archive has not been supplied with any Riot statement,
+            confirmed detection, ban record or other direct evidence showing
+            that LewiTrotter used a Titan, XIM, aimbot or another prohibited
+            cheating method.
+          </p>
+
+          <p>
+            LewiTrotter does have extremely high Tracker statistics. However,
+            high statistics on their own are not evidence of cheating. For a
+            player who repeatedly finished #1 on the platform, unusually strong
+            statistics are not unexpected.
+          </p>
+
+          <p>
+            The available evidence therefore does not support the cheating
+            allegation.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/leaderboards/ranked/all/default?platform=console&region=eu&act=292f58db-4c17-89a7-b1c0-ba988f0e9d98&page=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              E9 A2 leaderboard
+            </a>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/leaderboards/ranked/all/default?platform=console&region=eu&act=dcde7346-4085-de4f-c463-2489ed47983b&page=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              E9 A3 leaderboard
+            </a>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/leaderboards/ranked/all/default?platform=console&region=eu&act=ce2783e8-44fc-dd48-3da3-33b5ba6c4a22&page=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              V26 A3 leaderboard
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Wintrading allegations</h3>
+
+          <div class="assessment">
+            Assessment: Available Tracker evidence does not support the claim
+            that LewiTrotter wintraded.
+          </div>
+
+          <p>
+            Wintrading is a genuine problem discussed within high-ranked
+            Console Valorant, so it is worth examining even though LewiTrotter
+            is not one of the players most commonly accused of it.
+          </p>
+
+          <p>
+            A common indicator used by the community is an unusually high
+            number of games against the same player, particularly when that
+            player also appears frequently in the accused player's played-with
+            list.
+          </p>
+
+          <p>
+            During LewiTrotter's V26 Act 3 #1 run, his two most-played
+            opponents were OMT Naksio at seven games and Camvlr at four games.
+            Neither appears as one of his regular played-with teammates in the
+            evidence supplied to the archive.
+          </p>
+
+          <p>
+            Those encounter numbers are relatively low and do not resemble the
+            repeated-opponent patterns normally associated with wintrade
+            accusations. The supplied match history also does not show a
+            pattern of repeated consecutive games against the same player.
+          </p>
+
+          <p>
+            There was, however, an unusual situation near the end of V26 Act 3.
+            During the final leaderboard race between LewiTrotter and Céto,
+            some members of high-level EU Discord communities reportedly
+            offered to intentionally lose games to LewiTrotter because they
+            believed Céto was attempting to wintrade his way to #1.
+          </p>
+
+          <p>
+            The supplied Discord screenshot shows LewiTrotter responding
+            negatively after somebody says they surrendered for him.
+            LewiTrotter tells the player:
+          </p>
+
+          <blockquote>
+            “Pls don't do that again”
+          </blockquote>
+
+          <p>
+            He also explains that if he loses naturally, he would rather accept
+            the loss. This evidence points in the opposite direction of the
+            allegation: rather than encouraging players to throw games for him,
+            LewiTrotter is shown discouraging it.
+          </p>
+
+          <p>
+            There may have been isolated games in which players ignored his
+            request and threw regardless, but that is different from
+            LewiTrotter coordinating or endorsing wintrading.
+          </p>
+
+          <p>
+            The evidence supplied to the archive therefore does not support
+            the claim that LewiTrotter intentionally wintraded.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/01-lewitrotter-discourages-throwing.png.png"
+              data-caption="Evidence 1 — LewiTrotter discouraging a player from surrendering or throwing a game for him."
+            >
+              Evidence 1
+            </button>
+
+            <a
+              class="source-chip external-chip"
+              href="https://www.tiktok.com/@lewitrotter/photo/7654988357600021782"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tracker evidence
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Boosting-service allegations</h3>
+
+          <div class="assessment">
+            Assessment: The allegation remains unproven.
+          </div>
+
+          <p>
+            RSC Vectflow publicly accused LewiTrotter of operating or
+            advertising ranked boosting services in a Reddit post.
+          </p>
+
+          <p>
+            The material reportedly included screenshots connected to alleged
+            boosting advertisements, including an image that appeared to show
+            LewiTrotter's TikTok profile advertising ranked boosts.
+          </p>
+
+          <p>
+            There are issues with treating these screenshots as conclusive
+            evidence. The screenshots do not clearly show a Riot ID proving
+            that the accounts being boosted were being played by LewiTrotter,
+            and the alleged boost advertisements referenced in the post are no
+            longer visible on LewiTrotter's current TikTok profile.
+          </p>
+
+          <p>
+            The archive therefore cannot independently verify that LewiTrotter
+            operated the large-scale boosting service described in the
+            allegations.
+          </p>
+
+          <p>
+            There is also relevant context surrounding the source of the
+            allegation. RSC Vectflow and LewiTrotter have a history of public
+            conflict. Vectflow's frequent duo RSC Chad also publicly advertises
+            boosting services, yet has not appeared to receive the same public
+            criticism from Vectflow.
+          </p>
+
+          <p>
+            That inconsistency does not prove that Vectflow's allegation is
+            false, but it does mean his criticism should not automatically be
+            treated as an impartial confirmation of wrongdoing.
+          </p>
+
+          <p>
+            The archive therefore considers the alleged LewiTrotter boosting
+            service unproven.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="camvlr">
+      <div class="container">
+
+        <div class="eyebrow">Germany</div>
+        <h2 class="player-title">Camvlr</h2>
+
+        <article class="controversy">
+          <h3>Wintrading allegations</h3>
+
+          <div class="assessment">
+            Assessment: Widely alleged, but the supplied Tracker evidence does
+            not demonstrate wintrading.
+          </div>
+
+          <p>
+            Camvlr is one of the players most frequently accused of wintrading
+            in TikTok comments and public EU Discord communities.
+          </p>
+
+          <p>
+            Despite the frequency of these accusations, Camvlr's Tracker
+            encounter information does not display the clearest patterns
+            usually associated with wintrade allegations.
+          </p>
+
+          <p>
+            The same names do not dominate both his played-with and
+            played-against lists, and the supplied match history does not show
+            him repeatedly facing one specific player game after game.
+          </p>
+
+          <p>
+            Community suspicion alone is not proof. Based on the supplied
+            evidence, the claim that Camvlr wintrades remains unproven.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://www.tiktok.com/@charla7an/video/7634245824100207893"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TikTok discussion
+            </a>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/profile/riot/Twitch%20Camvlr%23KFC"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Camvlr Tracker
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Account sharing</h3>
+
+          <div class="assessment">
+            Assessment: Strong evidence shows that account sharing occurred in
+            at least some games.
+          </div>
+
+          <p>
+            The evidence surrounding account sharing is significantly stronger
+            than the evidence surrounding Camvlr's alleged wintrading.
+          </p>
+
+          <p>
+            Two Tracker.gg matches show two accounts associated with Camvlr
+            queued together in the same game. A single player obviously cannot
+            personally control two accounts in the same match.
+          </p>
+
+          <p>
+            There is also a supplied Discord screenshot in which Camvlr appears
+            to state that one of his accounts was reset from #1 to Ascendant 3
+            for account sharing.
+          </p>
+
+          <p>
+            The evidence therefore strongly supports that account sharing
+            occurred on at least some matches involving Camvlr-associated
+            accounts.
+          </p>
+
+          <p>
+            However, this should not be exaggerated into a claim that his
+            entire #1 run was obtained through account sharing. Only a limited
+            number of games have been demonstrated. The majority of the RR
+            Camvlr earned while competing for #1 cannot be assumed to have
+            been earned through account sharing without further evidence.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/02-camvlr-account-sharing-match-1.png.png"
+              data-caption="Evidence 2 — Tracker match showing two Camvlr-associated accounts in the same match."
+            >
+              Evidence 2
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/03-camvlr-account-sharing-match-2.png.png"
+              data-caption="Evidence 3 — Second Tracker match showing Camvlr-associated accounts together."
+            >
+              Evidence 3
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/04-camvlr-rank-reset-admission.png.png"
+              data-caption="Evidence 4 — Discord screenshot in which Camvlr appears to discuss a #1 account being reset to Ascendant 3 for account sharing."
+            >
+              Evidence 4
+            </button>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/match/6d2d73a8-a2f8-495a-b3db-12ea9b57932f"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tracker Match 1
+            </a>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/match/b80f8ff1-a398-4ccf-88bd-4bf2b857ea6d"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tracker Match 2
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Boosting-service allegations</h3>
+
+          <div class="assessment">
+            Assessment: There is supporting evidence, but ownership has not
+            been conclusively established.
+          </div>
+
+          <p>
+            Camvlr has also been accused of operating a paid boosting Discord.
+          </p>
+
+          <p>
+            The supplied screenshot shows a Discord server branded around
+            Camvlr with categories relating to accounts, coaching, boosting and
+            boost reviews. Users in the visible channel describe paying for
+            rank boosts.
+          </p>
+
+          <p>
+            This gives the allegation considerably more substance than a simple
+            anonymous accusation.
+          </p>
+
+          <p>
+            However, the screenshot alone cannot conclusively establish that
+            Camvlr personally owned or operated the server.
+          </p>
+
+          <p>
+            The archive therefore considers the allegation plausible and
+            supported by evidence, but not conclusively proven.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/05-camvlr-boosting-discord.png.png"
+              data-caption="Evidence 5 — Screenshot of the Discord server alleged to be associated with Camvlr and boosting services."
+            >
+              Evidence 5
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="1tap">
+      <div class="container">
+
+        <div class="eyebrow">France</div>
+        <h2 class="player-title">1Tap</h2>
+
+        <article class="controversy">
+          <h3>Wintrading allegations</h3>
+
+          <div class="assessment">
+            Assessment: The match history is highly suspicious, but does not
+            conclusively prove intentional wintrading.
+          </div>
+
+          <p>
+            1Tap has faced frequent wintrading allegations, partly because of
+            his connections to players associated with OMT and partly because
+            of unusual Tracker activity.
+          </p>
+
+          <p>
+            The strongest evidence concerns <strong>cml92#ERIS</strong>, an
+            account associated with 1Tap's earlier #1 run.
+          </p>
+
+          <p>
+            During the final day of V26 Act 2, five of the account's final six
+            games were played against
+            <strong>Twitch 1Tapvlr#LIVE</strong>.
+          </p>
+
+          <p>
+            This is particularly suspicious because cml92#ERIS is itself an
+            account previously associated with 1Tap.
+          </p>
+
+          <p>
+            There are rumours that the account had previously been sold, which
+            would provide an innocent explanation for why it could later
+            appear against 1Tap's other account. However, no evidence
+            confirming such a sale has been supplied.
+          </p>
+
+          <p>
+            The match pattern therefore raises a legitimate wintrade concern,
+            but without an admission, Riot enforcement or stronger evidence
+            showing intentional throwing, it cannot be stated as confirmed.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/06-1tap-cml92-final-games.png.png"
+              data-caption="Evidence 6 — Final V26 Act 2 match history shown for cml92#ERIS."
+            >
+              Evidence 6
+            </button>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/profile/riot/cml92%23ERIS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              cml92 Tracker
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>OMT Naksio account-use allegation</h3>
+
+          <div class="assessment">
+            Assessment: The supplied Discord screenshot supports the
+            allegation, but does not independently prove it.
+          </div>
+
+          <p>
+            A Discord screenshot appears to show 1Tap responding to
+            accusations involving his account by stating:
+          </p>
+
+          <blockquote>
+            “Its Nak<br>Naksio”
+          </blockquote>
+
+          <p>
+            If genuine, this would suggest that OMT Naksio had access to or was
+            playing on the account.
+          </p>
+
+          <p>
+            However, because the evidence is a Discord screenshot rather than
+            a Riot or Tracker record that identifies the person controlling
+            the account, it cannot be treated as absolute proof.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/07-1tap-naksio-account-message.png.png"
+              data-caption="Evidence 7 — Discord screenshot in which an account presented as 1Tap says Naksio was on the account."
+            >
+              Evidence 7
+            </button>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Boosting services</h3>
+
+          <div class="assessment">
+            Assessment: Publicly verifiable.
+          </div>
+
+          <p>
+            Unlike the wintrading allegations, 1Tap's involvement in
+            advertising boosting services can be directly checked.
+          </p>
+
+          <p>
+            As of the evidence supplied to the archive, 1Tap's TikTok profile
+            publicly contains boosting advertisements including posts telling
+            viewers to direct-message for boosts.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://www.tiktok.com/@1tappvlr0"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              1Tap TikTok
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="ceto">
+      <div class="container">
+
+        <div class="eyebrow">Turkey</div>
+        <h2 class="player-title">Céto</h2>
+
+        <article class="controversy">
+          <h3>Wintrading allegations</h3>
+
+          <div class="assessment">
+            Assessment: The supplied evidence is suspicious and supports
+            community concern, but does not conclusively prove wintrading.
+          </div>
+
+          <p>
+            Céto received heavy wintrading accusations during V26 Act 3, when
+            he was competing with LewiTrotter near the top of the leaderboard.
+          </p>
+
+          <p>
+            Tracker encounter statistics show
+            <strong>kazen#JustY</strong> as Céto's most-played-against opponent
+            during the act at 15 games.
+          </p>
+
+          <p>
+            At the same time, kazen also appears as one of Céto's most frequent
+            teammates. <strong>xyrzel#Lana</strong> also appears repeatedly
+            among Céto's opponents.
+          </p>
+
+          <p>
+            Individual matches show further unusual patterns. On
+            25 May 2026, Céto played against kazen#JustY and later the same day
+            played alongside kazen while facing xyrzel#Lana.
+          </p>
+
+          <p>
+            The fact that one of Céto's frequent teammates repeatedly appears
+            on the opposing team during a #1 leaderboard push understandably
+            created suspicion.
+          </p>
+
+          <p>
+            Céto also appears to win a large proportion of the supplied games
+            both when playing with these players and when playing against them.
+          </p>
+
+          <p>
+            However, there is an important alternative explanation. Céto
+            commonly plays on Istanbul servers, where the high-ranked player
+            population is smaller. A smaller matchmaking pool naturally makes
+            repeated encounters with the same players more likely.
+          </p>
+
+          <p>
+            The evidence therefore supports legitimate suspicion, but does not
+            prove that the matches were intentionally manipulated.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/08-ceto-most-played-against.png.png"
+              data-caption="Evidence 8 — Céto's V26 Act 3 played-against encounter data."
+            >
+              Evidence 8
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/09-ceto-most-played-with.png.png"
+              data-caption="Evidence 9 — Céto's V26 Act 3 played-with encounter data."
+            >
+              Evidence 9
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/10-ceto-vs-kazen-match.png.png"
+              data-caption="Evidence 10 — Céto playing against kazen#JustY on 25 May 2026."
+            >
+              Evidence 10
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/11-ceto-with-kazen-vs-xyrzel.png.png"
+              data-caption="Evidence 11 — Céto playing with kazen#JustY and against xyrzel#Lana on the same date."
+            >
+              Evidence 11
+            </button>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/profile/riot/C%C3%A9to%20%E3%81%BF%23%D1%81%D0%BA%D0%BB%D0%BE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Céto Tracker
+            </a>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/match/1141cacb-2038-4f5f-bb34-3e982b4295af"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Match A
+            </a>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/match/016678eb-96b0-4187-b567-8fec06ad6354"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Match B
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Istanbul servers and lower-ranked opponents</h3>
+
+          <div class="assessment">
+            Assessment: This is not evidence of wrongdoing by itself.
+          </div>
+
+          <p>
+            Céto has received criticism for playing Istanbul servers and
+            regularly encountering substantially lower-ranked opponents.
+          </p>
+
+          <p>
+            However, Céto is Turkish. Playing on the server associated with his
+            own region is not evidence that he is deliberately seeking easier
+            matchmaking.
+          </p>
+
+          <p>
+            The lower population of the server may naturally result in wider
+            rank differences.
+          </p>
+
+          <p>
+            The archive therefore does not consider this, by itself, evidence
+            of matchmaking manipulation.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/12-ceto-low-rank-istanbul-lobby.png.png"
+              data-caption="Evidence 12 — Example supplied of a lower-ranked Istanbul lobby involving Céto."
+            >
+              Evidence 12
+            </button>
+
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/match/1984dccf-2dfa-40c7-b7c8-620b45d52fce"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tracker match
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Five-stack allegations</h3>
+
+          <div class="assessment">
+            Assessment: Céto has played some lower-rank five-stacks, but the
+            evidence does not show that this was responsible for his major
+            leaderboard success.
+          </div>
+
+          <p>
+            Céto has occasionally played five-stack games involving
+            lower-ranked players. Those games can be found in his historical
+            Tracker activity.
+          </p>
+
+          <p>
+            However, the large majority of the supplied Céto match history
+            consists of solo and duo queueing, with comparatively little trio
+            or five-stack activity.
+          </p>
+
+          <p>
+            There is therefore evidence that low-rank five-stacking occurred
+            occasionally, but not evidence that Céto systematically relied on
+            it to generate a significant proportion of his leaderboard RR.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/profile/riot/C%C3%A9to%20%E3%81%BF%23%D1%81%D0%BA%D0%BB%D0%BE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Céto Tracker
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Boosting services</h3>
+
+          <div class="assessment">
+            Assessment: Publicly verifiable.
+          </div>
+
+          <p>
+            Céto's TikTok profile publicly advertises ranked boosting services.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://www.tiktok.com/@cetovlr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Céto TikTok
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="vectflow">
+      <div class="container">
+
+        <div class="eyebrow">England</div>
+        <h2 class="player-title">RSC Vectflow</h2>
+
+        <article class="controversy">
+          <h3>“Max ranging”</h3>
+
+          <div class="assessment">
+            Assessment: The supplied evidence shows rank-gap duoing consistent
+            with what the EU community calls max ranging.
+          </div>
+
+          <p>
+            RSC Vectflow has faced criticism for a practice commonly referred
+            to within the community as <strong>max ranging</strong>.
+          </p>
+
+          <p>
+            This involves a high-ranked player duoing with an account
+            positioned near the lowest rank permitted by Valorant's party
+            restrictions.
+          </p>
+
+          <p>
+            The purpose is generally understood to be obtaining a lower average
+            party rank and potentially receiving easier matchmaking.
+          </p>
+
+          <p>
+            The supplied stream screenshots show RSC Vectflow duoing with
+            accounts at significantly lower ranks in configurations consistent
+            with this practice.
+          </p>
+
+          <p>
+            This is stronger evidence than a simple accusation because the rank
+            configuration is visible directly on stream.
+          </p>
+
+          <p>
+            However, the archive has not been supplied evidence that Riot
+            punished Vectflow for these games. That does not automatically mean
+            that every form of max ranging is approved by Riot, but there is no
+            evidence here of a confirmed rules violation or enforcement action.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/13-vectflow-max-ranging.png.png"
+              data-caption="Evidence 13 — Stream screenshot supplied as evidence of rank-gap duoing involving RSC Vectflow."
+            >
+              Evidence 13
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/14-chad-vectflow-max-ranging.png.png"
+              data-caption="Evidence 14 — Additional stream screenshot involving RSC Vectflow and RSC Chad."
+            >
+              Evidence 14
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="eddn">
+      <div class="container">
+
+        <div class="eyebrow">Germany</div>
+        <h2 class="player-title">RSC Eddn</h2>
+
+        <article class="controversy">
+          <h3>PC five-stacking controversy</h3>
+
+          <div class="assessment">
+            Assessment: Multiple screenshots demonstrate the practice,
+            although they do not prove his entire PC climb was achieved this
+            way.
+          </div>
+
+          <p>
+            RSC Eddn has been criticised for five-stacking with much
+            lower-ranked players while playing at high Immortal rank on PC
+            Valorant.
+          </p>
+
+          <p>
+            Although this controversy concerns PC rather than Console Valorant,
+            it has affected discussion surrounding Eddn within the console
+            community.
+          </p>
+
+          <p>
+            The archive was supplied multiple Tracker screenshots showing Eddn
+            playing in five-stack lobbies containing players significantly
+            below his rank.
+          </p>
+
+          <p>
+            These screenshots establish that the practice occurred multiple
+            times.
+          </p>
+
+          <p>
+            What they do not establish is that Eddn relied on this method
+            throughout his entire PC climb.
+          </p>
+
+          <p>
+            It would therefore be inaccurate to claim that all of his PC rank
+            was obtained through low-rank five-stacking.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/15-eddn-pc-five-stack-1.png.png"
+              data-caption="Evidence 15 — Supplied Tracker screenshot involving RSC Eddn on PC."
+            >
+              Evidence 15
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/16-eddn-pc-five-stack-2.png.png"
+              data-caption="Evidence 16 — Supplied Tracker screenshot involving RSC Eddn on PC."
+            >
+              Evidence 16
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/17-eddn-pc-five-stack-3.png.png"
+              data-caption="Evidence 17 — Supplied Tracker screenshot involving RSC Eddn on PC."
+            >
+              Evidence 17
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/18-eddn-pc-five-stack-4.png.png"
+              data-caption="Evidence 18 — Supplied Tracker screenshot involving RSC Eddn on PC."
+            >
+              Evidence 18
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/19-eddn-pc-five-stack-5.png.png"
+              data-caption="Evidence 19 — Supplied Tracker screenshot involving RSC Eddn on PC."
+            >
+              Evidence 19
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/20-eddn-pc-five-stack-6.png.png"
+              data-caption="Evidence 20 — Supplied Tracker screenshot involving RSC Eddn on PC."
+            >
+              Evidence 20
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="chad">
+      <div class="container">
+
+        <div class="eyebrow">France</div>
+        <h2 class="player-title">RSC Chad</h2>
+
+        <article class="controversy">
+          <h3>Wintrading and account-sharing allegations</h3>
+
+          <div class="assessment">
+            Assessment: Chad appears to acknowledge that other people
+            wintraded on the account, but the screenshot cannot independently
+            prove the wider circumstances.
+          </div>
+
+          <p>
+            RSC Chad has faced allegations surrounding the account associated
+            with his #1 finish.
+          </p>
+
+          <p>
+            A supplied Discord screenshot shows a user asking Chad whether he
+            actually wintraded for #1.
+          </p>
+
+          <p>
+            The account presented as Chad responds:
+          </p>
+
+          <blockquote>
+            “was not my acc”
+          </blockquote>
+
+          <p>
+            and later:
+          </p>
+
+          <blockquote>
+            “ppl wt on it”
+          </blockquote>
+
+          <p>
+            If the screenshot is authentic, the message appears to acknowledge
+            that other people controlled the account and wintraded on it.
+          </p>
+
+          <p>
+            This would be significant evidence of account sharing and wintrade
+            activity involving the account itself.
+          </p>
+
+          <p>
+            However, because the evidence is a Discord screenshot, the archive
+            cannot independently verify the identity of the account shown or
+            all of the circumstances surrounding the alleged activity.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/21-rsc-chad-wintrade-account-message.png.png"
+              data-caption="Evidence 21 — Discord screenshot in which an account presented as RSC Chad discusses the #1 account and alleged wintrading."
+            >
+              Evidence 21
+            </button>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Max ranging</h3>
+
+          <div class="assessment">
+            Assessment: Stream screenshots support the allegation.
+          </div>
+
+          <p>
+            RSC Chad has also been shown participating in rank-gap duo
+            configurations with RSC Vectflow that are consistent with the
+            practice commonly called max ranging.
+          </p>
+
+          <p>
+            The rank configuration itself is visible.
+          </p>
+
+          <p>
+            As with Vectflow, no supplied evidence shows Riot taking
+            enforcement action over these games.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/13-vectflow-max-ranging.png.png"
+              data-caption="Evidence 13 — Stream screenshot involving rank-gap duoing."
+            >
+              Evidence 13
+            </button>
+
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/14-chad-vectflow-max-ranging.png.png"
+              data-caption="Evidence 14 — Stream screenshot involving RSC Chad and RSC Vectflow."
+            >
+              Evidence 14
+            </button>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Boosting services</h3>
+
+          <div class="assessment">
+            Assessment: Publicly verifiable.
+          </div>
+
+          <p>
+            RSC Chad publicly advertises boosting services on TikTok.
+          </p>
+
+          <p>
+            Past Twitch stream titles also contain a
+            <strong>!boost</strong> command, visible through TwitchTracker's
+            historical stream records.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://www.tiktok.com/@chadvlr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              RSC Chad TikTok
+            </a>
+
+            <a
+              class="source-chip external-chip"
+              href="https://twitchtracker.com/chadvlr/streams"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              TwitchTracker
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="evil">
+      <div class="container">
+
+        <div class="eyebrow">Turkey</div>
+        <h2 class="player-title">Evil</h2>
+
+        <article class="controversy">
+          <h3>Istanbul server criticism</h3>
+
+          <div class="assessment">
+            Assessment: No evidence of wrongdoing has been presented.
+          </div>
+
+          <p>
+            Evil has received criticism because he plays on Istanbul servers
+            and can therefore encounter lower-ranked opponents.
+          </p>
+
+          <p>
+            However, Evil is Turkish and is playing in his own region.
+          </p>
+
+          <p>
+            The lower population of the Istanbul server can naturally create
+            wider matchmaking rank differences.
+          </p>
+
+          <p>
+            The archive has not been supplied evidence that Evil deliberately
+            manipulated matchmaking, five-stacked with low ranks to abuse the
+            system, or otherwise engineered those lobbies.
+          </p>
+
+          <p>
+            The criticism therefore does not amount to evidence of wrongdoing.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="xyler">
+      <div class="container">
+
+        <div class="eyebrow">France</div>
+        <h2 class="player-title">OMT Xyler</h2>
+
+        <article class="controversy">
+          <h3>Wintrading allegations</h3>
+
+          <div class="assessment">
+            Assessment: Suspicious community material exists, but there is no
+            conclusive evidence that Xyler coordinated deliberate throws.
+          </div>
+
+          <p>
+            OMT Xyler has been the subject of repeated wintrading allegations
+            across Reddit, TikTok comments and public Discord communities.
+          </p>
+
+          <p>
+            Reddit posts have circulated videos showing accounts apparently
+            throwing games while playing against Xyler, alongside examples of
+            some of those accounts appearing in other suspicious matches.
+          </p>
+
+          <p>
+            OMT as a wider group has also faced substantial community suspicion
+            over alleged wintrading.
+          </p>
+
+          <p>
+            This gives the allegation more context than a completely
+            unsupported rumour.
+          </p>
+
+          <p>
+            However, footage of another player throwing a game does not by
+            itself establish that Xyler requested, coordinated or knew about
+            the throw.
+          </p>
+
+          <p>
+            There is currently no conclusive evidence supplied to the archive
+            showing an agreement between Xyler and the players involved.
+          </p>
+
+          <p>
+            The allegation therefore remains unproven.
+          </p>
+        </article>
+
+        <article class="controversy">
+          <h3>Boosting services</h3>
+
+          <div class="assessment">
+            Assessment: Publicly verifiable.
+          </div>
+
+          <p>
+            OMT Xyler's TikTok profile publicly advertises boosting services.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://www.tiktok.com/@xyler_v2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              OMT Xyler TikTok
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="player-section" id="sagar">
+      <div class="container">
+
+        <div class="eyebrow">Netherlands</div>
+        <h2 class="player-title">SaGaR</h2>
+
+        <article class="controversy">
+          <h3>V25 Act 3 cheating ban</h3>
+
+          <div class="assessment">
+            Assessment: The ban occurred, but SaGaR disputes its legitimacy and
+            the supplied evidence does not independently resolve the dispute.
+          </div>
+
+          <p>
+            SaGaR was leading the EU Console leaderboard during V25 Act 3
+            before receiving a ban on the final day.
+          </p>
+
+          <p>
+            The removal resulted in Camvlr recording the official #1 finish.
+          </p>
+
+          <p>
+            The ban caused significant cheating accusations against SaGaR,
+            particularly allegations that he had used aimbot.
+          </p>
+
+          <p>
+            SaGaR claims the ban was false.
+          </p>
+
+          <p>
+            In a supplied Discord screenshot, he states that staff received a
+            cheating clip that he says actually showed somebody else and
+            manually banned him after believing the player in the clip was
+            SaGaR.
+          </p>
+
+          <p>
+            He says:
+          </p>
+
+          <blockquote>
+            “i got false banned”
+          </blockquote>
+
+          <p>
+            and claims that the cheating footage used against him was not his
+            gameplay.
+          </p>
+
+          <p>
+            This screenshot clearly establishes SaGaR's explanation of the
+            ban. It does not establish that Riot confirmed his explanation or
+            officially declared the ban erroneous.
+          </p>
+
+          <p>
+            The archive therefore treats the reason and legitimacy of the ban
+            as disputed.
+          </p>
+
+          <div class="sources">
+            <button
+              type="button"
+              class="source-chip evidence-chip"
+              data-image="/controversies/evidence/22-sagar-false-ban-claim.png.png"
+              data-caption="Evidence 22 — SaGaR's Discord explanation of why he says his V25 Act 3 ban was false."
+            >
+              Evidence 22
+            </button>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Wintrading allegations</h3>
+
+          <div class="assessment">
+            Assessment: The final match history is highly unusual, but does
+            not by itself prove intentional wintrading.
+          </div>
+
+          <p>
+            SaGaR's V25 Act 3 Tracker history contains another major
+            controversy.
+          </p>
+
+          <p>
+            His final six games of the act were all played against the same
+            account:
+          </p>
+
+          <p>
+            <strong>Garchomp#SaGaR</strong>
+          </p>
+
+          <p>
+            six games consecutively.
+          </p>
+
+          <p>
+            That is an extremely unusual repeated-opponent sequence and
+            reasonably raises questions about how the matches occurred.
+          </p>
+
+          <p>
+            However, repeatedly matching the same account does not itself prove
+            that the opponent intentionally threw games or that SaGaR
+            coordinated the matchmaking.
+          </p>
+
+          <p>
+            The supplied information also indicates that SaGaR's ban was
+            associated with a cheating accusation rather than confirmed
+            wintrading.
+          </p>
+
+          <p>
+            The match pattern is therefore suspicious, but wintrading remains
+            unproven.
+          </p>
+
+          <div class="sources">
+            <a
+              class="source-chip external-chip"
+              href="https://tracker.gg/valorant/profile/riot/SaGaR%23Ruby"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              SaGaR Tracker
+            </a>
+          </div>
+        </article>
+
+        <article class="controversy">
+          <h3>Five-stack allegations</h3>
+
+          <div class="assessment">
+            Assessment: Historical examples exist, but they do not explain his
+            V25 Act 3 #1 push.
+          </div>
+
+          <p>
+            SaGaR has occasionally been labelled a “five-stacker” in public
+            Discord discussions.
+          </p>
+
+          <p>
+            There are several historical Episode 9 games in which he played
+            five-stacks containing lower-ranked players.
+          </p>
+
+          <p>
+            However, those games occurred long before his V25 Act 3 #1 run.
+          </p>
+
+          <p>
+            The available evidence does not show that low-rank five-stacking
+            was responsible for his V25 Act 3 leaderboard position.
+          </p>
+        </article>
+
+        <article class="controversy">
+          <h3>Swizzy account-sharing allegation</h3>
+
+          <div class="assessment">
+            Assessment: No sufficient evidence has been supplied.
+          </div>
+
+          <p>
+            Some community discussions claim that Swizzy played on or assisted
+            SaGaR's account during his V25 Act 3 push.
+          </p>
+
+          <p>
+            The archive has not been supplied meaningful evidence supporting
+            this allegation.
+          </p>
+
+          <p>
+            It therefore remains unsupported.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="page-note">
+      <div class="container">
+        <div class="page-note-box">
+          Evidence assessments on this page can be updated if additional
+          reliable information becomes available. A claim being discussed here
+          does not mean the archive considers it proven.
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="container">
+      Console Valorant Archive
+    </div>
+  </footer>
+
+  <div
+    class="modal"
+    id="evidenceModal"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Evidence image"
+  >
+    <div class="modal-inner">
+      <button
+        class="modal-close"
+        id="modalClose"
+        type="button"
+        aria-label="Close evidence image"
+      >
+        ×
+      </button>
+
+      <img
+        class="modal-image"
+        id="modalImage"
+        src=""
+        alt="Evidence screenshot"
+      >
+
+      <div class="modal-caption" id="modalCaption"></div>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("evidenceModal");
+    const modalImage = document.getElementById("modalImage");
+    const modalCaption = document.getElementById("modalCaption");
+    const modalClose = document.getElementById("modalClose");
+
+    function closeModal() {
+      modal.classList.remove("open");
+      document.body.classList.remove("modal-open");
+      modalImage.src = "";
+      modalCaption.textContent = "";
+    }
+
+    document.querySelectorAll(".evidence-chip").forEach((button) => {
+      button.addEventListener("click", () => {
+        modalImage.src = button.dataset.image;
+        modalCaption.textContent = button.dataset.caption || "";
+        modal.classList.add("open");
+        document.body.classList.add("modal-open");
+      });
+    });
+
+    modalClose.addEventListener("click", closeModal);
+
+    modal.addEventListener("click", (event) => {
+      if (event.target === modal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && modal.classList.contains("open")) {
+        closeModal();
+      }
+    });
+  </script>
+
+</body>
+</html>
