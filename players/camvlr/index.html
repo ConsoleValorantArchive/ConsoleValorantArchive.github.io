@@ -147,7 +147,21 @@
       border-color: #ff4655;
       color: #ff6672;
     }
+.profile-actions {
+  margin-top: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
 
+.profile-button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #ff4655;
+  color: white;
+  font-weight: 700;
+}
     section {
       padding: 65px 0;
     }
@@ -388,10 +402,10 @@
   <a href="/">Home</a>
   <a href="/#history">History</a>
   <a href="/#leaders">All-Time Leaders</a>
-  <a href="/players/">Players</a>
   <a href="/#records">Records</a>
-  <a href="/methodology/">Methodology</a>
+  <a href="/players/">Player Rankings</a>
   <a href="/controversies/">Controversies</a>
+  <a href="/methodology/">Methodology</a>
   <a href="/#about">About</a>
 </nav>
     </div>
@@ -424,7 +438,10 @@ Camvlr
           <span class="tag">Radiant</span>
           <span class="tag">3 official #1 act finishes</span>
         </div>
-
+<div class="profile-actions">
+  <a class="profile-button" href="/players/">Player Rankings</a>
+  <a class="profile-button" href="/controversies/">Controversies</a>
+</div>
       </div>
     </section>
 
